@@ -30,7 +30,7 @@
 }
 
 .site-title {
-    color: $grey-color-light;
+    color: $text-color;
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;
@@ -39,7 +39,7 @@
 
     &,
     &:visited {
-        color: $grey-color-light;
+        color: $text-color-light;
     }
 }
 
@@ -52,7 +52,7 @@
     }
 
     .page-link {
-        color: $grey-color-light;
+        color: $text-color-light;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
@@ -116,14 +116,14 @@
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
     a {
-        color: $grey-color-light !important;
+        color: $text-color;
     }
 }
 
 .footer-heading {
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
-    color: $grey-color-light;
+    color: $text-color-light;
 }
 
 .contact-list,
@@ -134,7 +134,7 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color-light;
+    color: $text-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -184,14 +184,14 @@
 #footer {
     bottom: 0;
     height: 6em;
-    color: #ddd !important;
+    color: #111 !important;
 
     #email {
-        color: #eee;
+        color: #333;
     }
 
     a {
-        color: #fff;
+        color: #000;
     }
 }
 
@@ -218,7 +218,7 @@
 
 .post-meta {
     font-size: $small-font-size;
-    color: $grey-color;
+    color: $text-color;
 }
 
 .post-link {
