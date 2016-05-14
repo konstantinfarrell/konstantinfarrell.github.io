@@ -13,10 +13,12 @@ My inventory of languages includes:
 
 - Python
 - C/C++
+- Bash
+- PHP
 - C#/.NET
 - Java
-- Javascript/jQuery
-- HTML
+- JavaScript/jQuery
+- HTML/CSS/SASS
 - SQL/MySQL/PostgreSQL
 
 And I am also proficient in the following frameworks:
