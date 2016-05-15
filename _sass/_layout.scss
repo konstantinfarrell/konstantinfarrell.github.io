@@ -192,9 +192,11 @@
 
     a {
         color: #fff;
+        &:hover {
+            text-shadow: 0 0 1px #ddd;
+        }
     }
 }
-
 
 /**
  * Page content
@@ -319,6 +321,14 @@
     @include media-query($smallscreen) {
         display: none;
     }
+}
+
+.project-image {
+    width: 300px;
+    height: 150px;
+    border-radius: 3px;
+    margin: 2px;
+    display: inline-block;
 }
 
 #profile {
