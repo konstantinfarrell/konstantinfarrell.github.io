@@ -36,27 +36,9 @@
         "team": "Solo - ARC"
     },
     {
-        "name": "EASA-Web-Forms",
-        "website": "N/A",
-        "image": "/static/img/external/easa.png",
-        "description": "EASA Web Forms was a HIPPAA compliant multi-agency, mental health web form service that utilized Django, ElasticSearch and PostgreSQL. Due to the sensitive nature of the application data and functionality, no further details can be given at this time.",
-        "composition": [
-            "Django",
-            "Python",
-            "PostgreSQL",
-            "Elastic Search",
-            "HIPPAA Compliance"
-        ],
-        "started": "May 2015",
-        "status": "Stalled",
-        "link": "N/A",
-        "category": "Django Site",
-        "team": "ARC"
-    },
-    {
         "name": "Oregon-Invasives-Hotline",
         "website": "https://oregoninvasiveshotline.org/",
-        "image": "/static/img/external/invasives.png",
+        "image": "/static/img/external/invasives_01.png",
         "description": "The Oregon Invasives Species Hotline is a project inherited and maintained by ARC. The hotline is designed with the user in mind. To help facilitate the users involvement in the detection and prevention of outbreaks of invasive species through an easy to use, web-based interface.",
         "composition": [
             "Django",
@@ -73,7 +55,7 @@
     {
         "name": "TAOS",
         "website": "https://taos.tel.pdx.edu/",
-        "image":"/static/img/external/taos.png",
+        "image":"/static/img/external/taos_01.png",
         "description": "The refactoring of the Telecom Automated Order System (TAOS) was a PHP site tasked to ARC with the intention of updating the out-of-date system, and patching any potential security vulnerabilities. The size of the project was reduced drastically as the entire project was refactored and optimized.",
         "composition": [
             "PHP",
@@ -88,7 +70,7 @@
     {
         "name": "Mobile-Learning-Project",
         "website": "https://language.research.pdx.edu",
-        "image": "/static/img/external/mobile_learning_project.png",
+        "image": "/static/img/external/mobile_learning_project_01.png",
         "description": "The Mobile Learning Project brings together faculty from various Portland State University departments and units (World Languages and Literatures, Applied Linguistics, and the Literacy, Language, & Technology Research Group) as well as other national and international collaborators and research networks. Our efforts focus on two areas: (1) the design and implementation of formative pedagogical interventions that involve mobile and other digital technologies to create language learning opportunities, and (2) video-based research on the digital interventions we create that utilize interdisciplinary approaches associated with learning sciences and second language development research.",
         "composition": [
             "Django",
@@ -100,5 +82,23 @@
         "link": "/projects/mlp/",
         "category": "Django Site",
         "team": "Solo - ARC"
+    },
+    {
+        "name": "EASA-Web-Forms",
+        "website": "N/A",
+        "image": "/static/img/external/easa-02.png",
+        "description": "EASA Web Forms was a HIPPAA compliant multi-agency, web form service that utilized Django, ElasticSearch and PostgreSQL. Due to the sensitive nature of the application data and functionality, no further details can be given at this time.",
+        "composition": [
+            "Django",
+            "Python",
+            "PostgreSQL",
+            "Elastic Search",
+            "HIPPAA Compliance"
+        ],
+        "started": "May 2015",
+        "status": "Stalled",
+        "link": "N/A",
+        "category": "Django Site",
+        "team": "ARC"
     }
 ]
