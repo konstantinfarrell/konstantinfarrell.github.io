@@ -36,21 +36,20 @@
         "team": "Solo - ARC"
     },
     {
-        "name": "Oregon-Invasives-Hotline",
-        "website": "https://oregoninvasiveshotline.org/",
-        "image": "/static/img/external/invasives_01.png",
-        "description": "The Oregon Invasives Species Hotline is a project inherited and maintained by ARC. The hotline is designed with the user in mind. To help facilitate the users involvement in the detection and prevention of outbreaks of invasive species through an easy to use, web-based interface.",
+        "name": "Mobile-Learning-Project",
+        "website": "https://language.research.pdx.edu",
+        "image": "/static/img/external/mobile_learning_project_01.png",
+        "description": "The Mobile Learning Project brings together faculty from various Portland State University departments and units (World Languages and Literatures, Applied Linguistics, and the Literacy, Language, & Technology Research Group) as well as other national and international collaborators and research networks. Our efforts focus on two areas: (1) the design and implementation of formative pedagogical interventions that involve mobile and other digital technologies to create language learning opportunities, and (2) video-based research on the digital interventions we create that utilize interdisciplinary approaches associated with learning sciences and second language development research.",
         "composition": [
             "Django",
             "Python",
-            "PostgreSQL",
-            "Python Image Library"
+            "MySQL"
         ],
-        "started": "July, 2015",
-        "status": "Production",
-        "link": "/projects/invasives/",
+        "started": "July, 2014",
+        "status": "Complete",
+        "link": "/projects/mlp/",
         "category": "Django Site",
-        "team": "ARC"
+        "team": "Solo - ARC"
     },
     {
         "name": "TAOS",
@@ -68,20 +67,21 @@
         "team": "ARC"
     },
     {
-        "name": "Mobile-Learning-Project",
-        "website": "https://language.research.pdx.edu",
-        "image": "/static/img/external/mobile_learning_project_01.png",
-        "description": "The Mobile Learning Project brings together faculty from various Portland State University departments and units (World Languages and Literatures, Applied Linguistics, and the Literacy, Language, & Technology Research Group) as well as other national and international collaborators and research networks. Our efforts focus on two areas: (1) the design and implementation of formative pedagogical interventions that involve mobile and other digital technologies to create language learning opportunities, and (2) video-based research on the digital interventions we create that utilize interdisciplinary approaches associated with learning sciences and second language development research.",
+        "name": "Oregon-Invasives-Hotline",
+        "website": "https://oregoninvasiveshotline.org/",
+        "image": "/static/img/external/invasives_01.png",
+        "description": "The Oregon Invasives Species Hotline is a project inherited and maintained by ARC. The hotline is designed with the user in mind. To help facilitate the users involvement in the detection and prevention of outbreaks of invasive species through an easy to use, web-based interface.",
         "composition": [
             "Django",
             "Python",
-            "MySQL"
+            "PostgreSQL",
+            "Python Image Library"
         ],
-        "started": "July, 2014",
-        "status": "Complete",
-        "link": "/projects/mlp/",
+        "started": "July, 2015",
+        "status": "Production",
+        "link": "/projects/invasives/",
         "category": "Django Site",
-        "team": "Solo - ARC"
+        "team": "ARC"
     },
     {
         "name": "EASA-Web-Forms",
