@@ -21,8 +21,6 @@
  * Site header
  */
 .site-header {
-    //background-color: $background-color;
-    //border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
     // Positioning context for the mobile navigation icon
@@ -114,9 +112,13 @@
 .site-footer {
     //background-color: $background-color;
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding: $spacing-unit $spacing_unit/2;
     a {
         color: $grey-color-light !important;
+    }
+    @include media-query($on-palm){
+        max-width: 100%;
+        padding: 1em 1em;
     }
 }
 
@@ -195,6 +197,44 @@
         &:hover {
             text-shadow: 0 0 1px #ddd;
         }
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    background-color: #666;
+    opacity: 0.15;
+    color: #eee;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    padding: 0.5em;
+
+    .overlay-text {
+        .row {
+            display: flex;
+            margin: 0 auto;
+            margin-bottom: 0.5em;
+            h3 {
+                margin-bottom: 0.5em;
+            }
+            .bottom {
+                margin-bottom: 0;
+                position: absolute;
+                bottom: 0.5em;
+                color: $brand-color;
+            }
+            &:after {
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: #333;
+        text-shadow: 0 0 1px #111;
+        opacity: 1;
     }
 }
 
@@ -323,12 +363,39 @@
     }
 }
 
-.project-image {
-    width: 300px;
-    height: 150px;
-    border-radius: 3px;
-    margin: 2px;
-    display: inline-block;
+
+/*
+*   Project Stuff
+*/
+.project {
+    background-color: $post-background-color;
+    padding: $spacing-unit/2 ;
+
+    @include media-query($on-palm) {
+        padding: 0px 0px;
+        overflow-x: scroll;
+    }
+
+}
+
+
+.project-grid {
+    margin: 0 auto;
+
+    .project-image {
+        width: 275px;
+        height: 275px;
+        border-radius: 3px;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid $grey-color;
+
+        @include media-query($on-palm){
+            max-width: 100%;
+        }
+    }
 }
 
 #profile {
