@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Dot-Defendr",
+        "website": "http://dotdefender.github.io",
+        "image": "/static/img/external/dotdefendr-preview.png",
+        "description": "Dot Defendr is a 2-dimensional, top-down, shooter defense game where the player controls a 'dot' with 'wasd' controls and the mouse. The objective is to stay alive through as many waves as possible and try to beat the high score based on accuracy, speed of completion, and damage taken.",
+        "composition": [
+            "JavaScript",
+            "jQuery",
+            "gameQuery",
+        ],
+        "started": "December, 2015",
+        "status": "In-progress",
+        "link": "/projects/dotdefendr/",
+        "category": "HTML5 / JavaScript Game",
+        "team": "Solo"
+    },
+    {
+        "name": "Tree-Stories",
+        "website": "https://climatecope.research.pdx.edu/cs/",
+        "image": "/static/img/external/tree_stories.png",
+        "description": "Tree Stories is a project that incorporated the Leaflet API, Facebook and Google's PHP API's for Single Sign On, and a custom PHP framework and database backend. The objective was to take the existing project and implement social media support for easy user authentication, to allow the site to essentially become its own social network based around Portland Trees. Users are able to post stories and images, as well as view posts from other users. Users can search and filter posts too, and administrators are able to moderate the site content without needing to get on a database. The site was sponsored by the Sustaining Urban Places Research (SUPR) Lab at Portland State University",
+        "composition": [
+            "PHP",
+            "MySQL",
+            "JavaScript",
+            "jQuery",
+            "Facebook PHP API",
+            "Google PHP API",
+            "Leaflet API"
+        ],
+        "started": "December, 2015",
+        "status": "Post-Production",
+        "link": "/projects/treestories/",
+        "category": "PHP Site",
+        "team": "Solo - ARC"
+    },
+    {
+        "name": "Mobile-Learning-Project",
+        "website": "https://language.research.pdx.edu",
+        "image": "/static/img/external/mobile_learning_project.png",
+        "description": "The Mobile Learning Project brings together faculty from various Portland State University departments and units (World Languages and Literatures, Applied Linguistics, and the Literacy, Language, & Technology Research Group) as well as other national and international collaborators and research networks. Our efforts focus on two areas: (1) the design and implementation of formative pedagogical interventions that involve mobile and other digital technologies to create language learning opportunities, and (2) video-based research on the digital interventions we create that utilize interdisciplinary approaches associated with learning sciences and second language development research.",
+        "composition": [
+            "Django",
+            "Python",
+            "MySQL"
+        ],
+        "started": "July, 2014",
+        "status": "Complete",
+        "link": "/projects/mlp/",
+        "category": "Django Site",
+        "team": "Solo - ARC"
+    }
+]

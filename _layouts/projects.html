@@ -1,0 +1,52 @@
+---
+title: Projects I've Worked On
+layout: default
+---
+<div class='project'>
+    <h1>{{ page.title }}</h1>
+    <div class='project-grid'>
+        {% for project in site.data.projects %}
+            <div id='{{ project.name }}_div' class='project-image'>
+                <img id='{{ project.name }}_img' src="{{ project.image }}" alt="{{ project.name }}" style="visibility: hidden;"></img>
+                <a href='{{ project.link }}'><div class='overlay'></div></a>
+            </div>
+            <script>
+            $("#{{ project.name }}_div").css({
+                'background-image': 'url("{{ project.image }}")',
+                'background-position': 'center',
+                'background-repeat': 'no-repeat',
+                'background-size': 'cover'
+            });
+
+            var width = $('#{{ project.name }}_div').width();
+            var height = $('#{{ project.name }}_div').height();
+            $(".overlay").css({
+                'width': width,
+                'height': height,
+            });
+
+            $("#{{ project.name }}_div").hover(function(e){
+                e.preventDefault;
+                var overlay_text = '<div class="overlay-text"><div class="row"><div class="col-md-12"><h3 class="text-center">{{ project.name | replace: "-"," " | camelcase }}</h3></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-7"><strong>{{ project.category }}</strong></div><div class="col-md-5"><span class="badge pull-right">{{ project.team }}</span></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12">{{ project.description | escape | truncate: 250 }}</div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12 text-center bottom">Click to See Full Project</div></div></div>';
+                if($(this).html().indexOf('.overlay-text') == -1){
+                    $(this).find('div.overlay').append(overlay_text).fadeIn(300).promise().done();
+                }
+            }, function(){
+                $(this).find('div.overlay').find('.overlay-text').fadeOut(300).promise().done(function(e){
+                    e.preventDefault;
+                    $(this).remove('.overlay-text');
+                });
+            });
+            </script>
+        {% endfor %}
+    </div>
+    <script>
+        var max_per_row = Math.floor($('.project').width()/$('.project-image').width());
+        var max_width = max_per_row *($('.project-image').width()+5.5);
+        $('.project-grid').width(max_width);
+        $('.project-grid').position().left = ($('.project').width() - max_width)/2;
+    </script>
+</div>
