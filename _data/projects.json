@@ -18,7 +18,7 @@
     {
         "name": "Tree-Stories",
         "website": "https://climatecope.research.pdx.edu/cs/",
-        "image": "/static/img/external/tree_stories.png",
+        "image": "/static/img/external/tree_stories_small.png",
         "description": "Tree Stories is a project that incorporated the Leaflet API, Facebook and Google's PHP API's for Single Sign On, and a custom PHP framework and database backend. The objective was to take the existing project and implement social media support for easy user authentication, to allow the site to essentially become its own social network based around Portland Trees. Users are able to post stories and images, as well as view posts from other users. Users can search and filter posts too, and administrators are able to moderate the site content without needing to get on a database. The site was sponsored by the Sustaining Urban Places Research (SUPR) Lab at Portland State University",
         "composition": [
             "PHP",
@@ -69,7 +69,7 @@
     {
         "name": "Oregon-Invasives-Hotline",
         "website": "https://oregoninvasiveshotline.org/",
-        "image": "/static/img/external/invasives_01.png",
+        "image": "/static/img/external/invasives_small.png",
         "description": "The Oregon Invasives Species Hotline is a project inherited and maintained by ARC. The hotline is designed with the user in mind. To help facilitate the users involvement in the detection and prevention of outbreaks of invasive species through an easy to use, web-based interface.",
         "composition": [
             "Django",
