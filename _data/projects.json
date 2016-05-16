@@ -1,7 +1,7 @@
 [
     {
         "name": "Dot-Defendr",
-        "website": "http://dotdefender.github.io",
+        "website": "http://dotdefendr.github.io",
         "image": "/static/img/external/dotdefendr-preview.png",
         "description": "Dot Defendr is a 2-dimensional, top-down, shooter defense game where the player controls a 'dot' with 'wasd' controls and the mouse. The objective is to stay alive through as many waves as possible and try to beat the high score based on accuracy, speed of completion, and damage taken.",
         "composition": [
