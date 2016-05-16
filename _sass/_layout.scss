@@ -277,6 +277,7 @@
 .post {
     background-color: $post-background-color;
     padding: $spacing-unit $spacing_unit*2;
+    overflow-x: hidden;
 
     @include media-query($on-palm) {
         padding: 10px 10px;
@@ -310,9 +311,14 @@
 
 .post-content {
     img {
+        padding: 0;
+        //margin: 0 0;
         border-radius: 2px;
         filter: drop-shadow(0px 0px 2px #111);
         -webkit-filter: drop-shadow(0px 0px 2px #111);
+        width: 130%;
+        max-width: 130%;
+        margin-left: -15%;
     }
 
     h2 {
@@ -351,6 +357,7 @@
 
         img {
             max-height: 170px;
+            width: auto;
             max-width: 100%;
             -webkit-filter: drop-shadow(0px 0px 2px #000);
             filter: drop-shadow(0px 0px 2px #000);
