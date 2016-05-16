@@ -25,19 +25,21 @@ layout: default
                 'height': height,
             });
 
+            var overlay_text = '';
             $("#{{ project.name }}_div").hover(function(e){
                 e.preventDefault;
-                var overlay_text = '<div class="overlay-text"><div class="row"><div class="col-md-12"><h3 class="text-center">{{ project.name | replace: "-"," " | camelcase }}</h3></div></div>';
+                overlay_text = '<div class="overlay-text"><div class="row"><div class="col-md-12"><h3 class="text-center">{{ project.name | replace: "-"," " | camelcase }}</h3></div></div>';
                 overlay_text += '<div class="row"><div class="col-md-7"><strong>{{ project.category }}</strong></div><div class="col-md-5"><span class="badge pull-right">{{ project.team }}</span></div></div>';
                 overlay_text += '<div class="row"><div class="col-md-12">{{ project.description | escape | truncate: 120 }}</div></div>';
                 overlay_text += '<div class="row"><div class="col-md-12 text-center bottom">Click to See Full Project</div></div></div>';
-                if($(this).html().indexOf('.overlay-text') == -1){
+                if($(this).html().indexOf('overlay-text') == -1){
                     $(this).find('div.overlay').append(overlay_text).fadeIn(300).promise().done();
                 }
-            }, function(){
-                $(this).remove('.overlay-text');
+            }, function(e){
+                overlay_text = '';
                 $(this).find('div.overlay').find('.overlay-text').fadeOut(300).promise().done(function(e){
                     e.preventDefault;
+                    $(this).remove('.overlay-text');
                 });
             });
             </script>
