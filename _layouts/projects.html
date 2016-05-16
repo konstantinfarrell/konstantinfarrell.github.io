@@ -1,5 +1,5 @@
 ---
-title: Projects I Contribute To.
+title: Projects I'm a Part Of.
 layout: default
 ---
 <div class='project'>
@@ -35,9 +35,9 @@ layout: default
                     $(this).find('div.overlay').append(overlay_text).fadeIn(300).promise().done();
                 }
             }, function(){
+                $(this).remove('.overlay-text');
                 $(this).find('div.overlay').find('.overlay-text').fadeOut(300).promise().done(function(e){
                     e.preventDefault;
-                    $(this).remove('.overlay-text');
                 });
             });
             </script>
