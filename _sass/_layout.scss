@@ -309,6 +309,11 @@
 }
 
 .post-content {
+    img {
+        border-radius: 2px;
+        box-shadow: 0 0 3px #333;
+    }
+
     h2 {
         font-size: 32px;
 
