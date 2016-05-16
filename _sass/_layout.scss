@@ -357,6 +357,9 @@
             font-family: $header-font-family;
             font-weight: 900;
         }
+        h3 {
+            font-size: 30px;
+        }
         @include media-query($on-laptop) {
             max-height: 250px;
         }
