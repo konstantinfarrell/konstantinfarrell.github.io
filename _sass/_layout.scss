@@ -29,10 +29,12 @@
 }
 
 .site-title {
+    font-family: $header-font-family;
+    font-weight: 900;
     color: $grey-color-light;
-    font-size: 26px;
+    font-size: 32px;
     line-height: 56px;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     margin-bottom: 0;
     float: left;
 
@@ -312,7 +314,7 @@
 .post-content {
     img {
         padding: 0;
-        //margin: 0 0;
+        margin-bottom: $spacing-unit;
         border-radius: 2px;
         filter: drop-shadow(0px 0px 2px #111);
         -webkit-filter: drop-shadow(0px 0px 2px #111);
@@ -347,10 +349,14 @@
     .row {
         background-color: $post-background-color;
         margin: 5px 0px;
-        padding: 15px 0px;
+        padding: $spacing-unit/2 0px;
         max-height: 200px;
         overflow: hidden;
-
+        h1, h2, h3 {
+            margin: $spacing-unit/2 0;
+            font-family: $header-font-family;
+            font-weight: 900;
+        }
         @include media-query($on-laptop) {
             max-height: 250px;
         }
@@ -398,7 +404,7 @@
 
     .project-image {
         width: 275px;
-        height: 225px;
+        height: 200px;
         border-radius: 3px;
         margin: 0 auto;
         display: inline-block;
