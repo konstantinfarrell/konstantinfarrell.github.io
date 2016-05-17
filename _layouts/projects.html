@@ -46,9 +46,15 @@ layout: default
         {% endfor %}
     </div>
     <script>
-        var max_per_row = Math.floor($('.project').width()/$('.project-image').width());
-        var max_width = max_per_row *($('.project-image').width()+5.5);
-        $('.project-grid').width(max_width);
-        $('.project-grid').position().left = ($('.project').width() - max_width)/2;
+        function place(){
+            var max_per_row = Math.floor($('.project').width()/$('.project-image').width());
+            var max_width = max_per_row *($('.project-image').width()+5.5);
+            $('.project-grid').width(max_width);
+            $('.project-grid').position().left = ($('.project').width() - max_width)/2;
+        }
+        place();
+        $(window).resize(function(){
+            place();
+        });
     </script>
 </div>
