@@ -207,6 +207,7 @@
             text-shadow: 0 0 1px #ddd;
         }
     }
+
 }
 
 .overlay {
@@ -289,7 +290,7 @@
 
     @include media-query($on-palm) {
         padding: 10px 10px;
-        overflow-x: scroll;
+        //overflow-x: scroll;
     }
 
     iframe {
@@ -443,6 +444,9 @@
 
 .push {
     height: 150px;
+    @include media-query($on-palm) {
+        height: $spacing-unit;
+    }
 }
 
 #logo {
