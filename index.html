@@ -62,6 +62,10 @@
             });
         }
         //fade();
+        if($('#link-to-blog').position().top + $('#link-to-blog').height() > $(window).height()){
+            $('.push').css('height', '0px');
+            $('#main-name').css('margin-top', '0px');
+        }
     </script>
 </body>
 </html>
