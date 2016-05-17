@@ -208,6 +208,12 @@
         }
     }
 
+    @include media-query($on-palm) {
+        h1, h2 {
+            max-width: inherit;
+            margin: $spacing-unit/2;
+        }
+    }
 }
 
 .overlay {
