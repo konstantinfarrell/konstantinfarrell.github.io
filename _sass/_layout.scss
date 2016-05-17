@@ -408,6 +408,7 @@
 .project {
     background-color: $post-background-color;
     padding: $spacing-unit/2 ;
+    overflow: hidden;
 
     @include media-query($on-palm) {
         padding: 0px 0px;
