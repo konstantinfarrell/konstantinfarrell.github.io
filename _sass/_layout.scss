@@ -454,11 +454,18 @@
 .push {
     height: 150px;
     @include media-query($on-palm) {
-        height: $spacing-unit;
+        height: $spacing-unit/2;
     }
 }
 
 #logo {
     margin: 1em auto;
     width: auto;
+}
+
+#link-to-blog {
+    color: #3a9fe5 !important;
+    &:hover {
+        text-shadow: 0 0 2px #3a9fe5 !important;
+    }
 }
