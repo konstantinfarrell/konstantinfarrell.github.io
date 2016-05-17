@@ -62,7 +62,7 @@
             });
         }
         //fade();
-        if($('#link-to-blog').position().top + $('#link-to-blog').height() > $(window).height()){
+        if($(window).height() < 620){
             $('.push').css('height', '0px');
             $('#main-name').css('margin-top', '0px');
         }
