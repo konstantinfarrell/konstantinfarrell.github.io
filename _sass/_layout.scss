@@ -457,7 +457,7 @@
 .push {
     height: 150px;
     @include media-query($on-palm) {
-        height: $spacing-unit/2;
+        height: 10px;
     }
 }
 
