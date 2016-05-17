@@ -304,8 +304,10 @@
         height: 300px;
         border: 0;
         margin-bottom: $spacing-unit;
-        border-radius: 2px;
         box-shadow: 0 0 5px #666;
+        width: 130%;
+        max-width: 130%;
+        margin-left: -15%;
     }
 }
 
