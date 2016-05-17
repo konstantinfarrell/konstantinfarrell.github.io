@@ -67,6 +67,9 @@
             $('#main-name').css('margin-top', '0px');
         }
         $('#main-name').text($(window).height());
+        var h = $('#main-container').height() + $('#footer').height();
+
+        $('#main-name').text(h);
     </script>
 </body>
 </html>
