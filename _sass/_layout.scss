@@ -366,7 +366,8 @@
         background-color: $post-background-color;
         margin: 5px 0px;
         padding: $spacing-unit/2 0;
-        max-height: 200px;
+        min-height: 200px;
+        max-height: 225px;
         overflow: hidden;
         h1, h2, h3 {
             margin: $spacing-unit/2 0;
@@ -377,13 +378,15 @@
             font-size: 30px;
         }
         @include media-query($on-laptop) {
-            max-height: 250px;
+            max-height: 300px;
         }
+
         @include media-query($on-palm) {
             max-height: 400px;
         }
+
         img {
-            max-height: 170px;
+            max-height: 195px;
             width: auto;
             max-width: 100%;
             -webkit-filter: drop-shadow(0px 0px 2px #000);
