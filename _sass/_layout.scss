@@ -294,6 +294,11 @@
     background-color: $post-background-color;
     padding: $spacing-unit $spacing_unit*2;
     overflow-x: hidden;
+    font-size: 14px;
+
+    p {
+        margin: 0 0 10;
+    }
 
     @include media-query($on-palm) {
         padding: 10px 10px;
