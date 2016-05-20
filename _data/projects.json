@@ -2,7 +2,7 @@
     {
         "name": "Dot-Defendr",
         "website": "http://dotdefendr.github.io",
-        "image": "/static/img/external/dotdefendr-preview.png",
+        "image": "/files/img/dotdefendr-preview.png",
         "description": "Dot Defendr is a 2-dimensional, top-down, shooter defense game where the player controls a 'dot' with 'wasd' controls and the mouse. The objective is to stay alive through as many waves as possible and try to beat the high score based on accuracy, speed of completion, and damage taken.",
         "composition": [
             "JavaScript",
@@ -18,7 +18,7 @@
     {
         "name": "Tree-Stories",
         "website": "https://climatecope.research.pdx.edu/cs/",
-        "image": "/static/img/external/tree_stories_small.png",
+        "image": "/files/img/tree_stories_small.png",
         "description": "Tree Stories is a project that incorporated the Leaflet API, Facebook and Google's PHP API's for Single Sign On, and a custom PHP framework and database backend. The objective was to take the existing project and implement social media support for easy user authentication, to allow the site to essentially become its own social network based around Portland Trees. Users are able to post stories and images, as well as view posts from other users. Users can search and filter posts too, and administrators are able to moderate the site content without needing to get on a database. The site was sponsored by the Sustaining Urban Places Research (SUPR) Lab at Portland State University",
         "composition": [
             "PHP",
@@ -38,7 +38,7 @@
     {
         "name": "Mobile-Learning-Project",
         "website": "https://language.research.pdx.edu",
-        "image": "/static/img/external/mobile_learning_project_01.png",
+        "image": "/files/img/mobile_learning_project_01.png",
         "description": "The Mobile Learning Project brings together faculty from various Portland State University departments and units (World Languages and Literatures, Applied Linguistics, and the Literacy, Language, & Technology Research Group) as well as other national and international collaborators and research networks. Our efforts focus on two areas: (1) the design and implementation of formative pedagogical interventions that involve mobile and other digital technologies to create language learning opportunities, and (2) video-based research on the digital interventions we create that utilize interdisciplinary approaches associated with learning sciences and second language development research.",
         "composition": [
             "Django",
@@ -54,7 +54,7 @@
     {
         "name": "TAOS",
         "website": "https://taos.tel.pdx.edu/",
-        "image":"/static/img/external/taos_01.png",
+        "image":"/files/img/taos_01.png",
         "description": "The refactoring of the Telecom Automated Order System (TAOS) was a PHP site tasked to ARC with the intention of updating the out-of-date system, and patching any potential security vulnerabilities. The size of the project was reduced drastically as the entire project was refactored and optimized.",
         "composition": [
             "PHP",
@@ -69,7 +69,7 @@
     {
         "name": "Oregon-Invasives-Hotline",
         "website": "https://oregoninvasiveshotline.org/",
-        "image": "/static/img/external/invasives_small.png",
+        "image": "/files/img/invasives_small.png",
         "description": "The Oregon Invasives Species Hotline is a project inherited and maintained by ARC. The hotline is designed with the user in mind. To help facilitate the users involvement in the detection and prevention of outbreaks of invasive species through an easy to use, web-based interface.",
         "composition": [
             "Django",
@@ -86,7 +86,7 @@
     {
         "name": "EASA-Web-Forms",
         "website": "N/A",
-        "image": "/static/img/external/easa-02.png",
+        "image": "/files/img/easa-02.png",
         "description": "EASA Web Forms was a HIPPAA compliant multi-agency, web form service that utilized Django, ElasticSearch and PostgreSQL. Due to the sensitive nature of the application data and functionality, no further details can be given at this time.",
         "composition": [
             "Django",
@@ -97,7 +97,7 @@
         ],
         "started": "May 2015",
         "status": "Stalled",
-        "link": "N/A",
+        "link": "/projects/easa/",
         "category": "Django Site",
         "team": "ARC"
     }

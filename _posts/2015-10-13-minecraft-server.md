@@ -10,7 +10,7 @@ image: /files/server/img/Minecraft_logo.png
 image-alt: Minecraft Screenshot
 ---
 
-![Minecraft Screenshot](../../../../files/server/img/screenshot.png)
+![Minecraft Screenshot](/files/server/img/screenshot.png)
 
 # Lets Play Some Minecraft
 
