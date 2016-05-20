@@ -240,7 +240,7 @@
                 margin-bottom: 0;
                 position: absolute;
                 bottom: 0.5em;
-                color: $text-color;
+                font-weight: 600;
             }
             &:after {
                 margin-bottom: 1em;
@@ -453,6 +453,7 @@
     .overlay {
         h1, h2, h3 {
             font-family: $header-font-family;
+            text-shadow: 0 0 2px $brand-color;
         }
     }
 }
@@ -477,9 +478,6 @@
 }
 
 #link-to-blog {
-    //color: #3a9fe5 !important;
-    //&:hover {
-    //    text-shadow: 0 0 2px #3a9fe5 !important;
-    //}
+    font-weight: 600;
 }
 
