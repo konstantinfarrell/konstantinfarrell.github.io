@@ -1,7 +1,6 @@
 // Now define the variables for each cell.
 // Note that memory only applies to cells that have been clicked.
-var size = [30, 30];
-//var num = [$(document).width()/size[0], $(document).height()/size[1]];
+var size = 30;
 var memory = 3000;
 
 // Take RGB values and return a CSS formatted string representation.
@@ -45,8 +44,8 @@ function gribset(x,y){
     // grid space and make sure there isn't something
     // in that space already. (We dont need to stack,
     // layers, just change the color of the last one)
-    var index_X = Math.floor(x/size[0]);
-    var index_Y = Math.floor(y/size[1]);
+    var index_X = Math.floor(x/size);
+    var index_Y = Math.floor(y/size);
     var name = index_X + "_" + index_Y + "_cell";
     var exists = document.getElementById(name);
     if(exists == null){
@@ -63,10 +62,10 @@ function gribset(x,y){
         'background-color': color,
         'box-shadow': '0 0 1px '+color,
         'border-radius': '2px',
-        'top': index_Y * size[1],
-        'left': index_X * size[0],
-        'width': size[0]-3,
-        'height': size[1]-3
+        'top': index_Y * size,
+        'left': index_X * size,
+        'width': size-3,
+        'height': size-3
     });
     return name;
 }
