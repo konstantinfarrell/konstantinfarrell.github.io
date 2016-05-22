@@ -43,8 +43,8 @@ $(document).ready(function(e){
     var num = [$(document).width()/size[0], $(document).height()/size[1]];
     var memory = 3000;
 
-    // Here's our main function.
     function gribble(x, y){
+        // Create a gribble-tile, and shunt it.
         var name = gribset(x,y);
         // Now pause for a bit before
         setTimeout(function(){
@@ -97,27 +97,6 @@ $(document).ready(function(e){
             $("#"+name).remove();
         });
     }
-
-    /*
-    function gribbilation(x, y, times){
-        var name = gribset(x,y);
-
-        var times = times-1;
-
-        if(times < 0){
-            gribbilation(x+size[0],y, times);
-            gribbilation(x,y+size[1], times);
-            gribbilation(x-size[0],y, times);
-            gribbilation(x,y-size[1], times);
-
-            gribbilation(x+size[0],y+size[1], times);
-            gribbilation(x+size[0],y-size[1], times);
-            gribbilation(x-size[0],y+size[1], times);
-            gribbilation(x-size[0],y-size[1], times);
-        }
-        $("#"+name).fadeOut(100).promise();
-    }
-    */
 
     // Also let users click to add a square.
     $(document).click(function(e){
