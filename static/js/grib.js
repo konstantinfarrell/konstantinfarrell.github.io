@@ -51,13 +51,12 @@ $(document).ready(function(){
     var num = [$(document).width()/size[0], $(document).height()/size[1]];
     var memory = 3000;
 
-    $("#grib").click(function(e){
-        var x = e.clientX;
-        var y = e.clientY;
+    function gribble(x, y){
         var index_X = Math.floor(x/size[0]);
         var index_Y = Math.floor(y/size[1]);
         var name = index_X + "_" + index_Y + "_cell";
         var exists = document.getElementById(name);
+        var clicked = false;
 
         if(!exists){
             $("#grib").append("<div id='"+name+"'></div>");
@@ -78,15 +77,40 @@ $(document).ready(function(){
             'height': size[1]
         });
 
-        setTimeout(function(){
-            var d = goDirection();
-            var direction = d[0];
-            var magnitude = d[1];
-            var animation = {};
-            animation[direction] = magnitude;
-            $("#"+name).animate(animation,500).promise().done(function(){
-                $("#"+name).remove();
-            });
-        }, memory);
+        if(!clicked){
+            clicked = true;
+            setTimeout(function(){
+                var d = goDirection();
+                var direction = d[0];
+                var magnitude = d[1];
+                var animation = {};
+                var time = Math.floor(Math.random() * 600 + 300);
+                animation[direction] = magnitude;
+                $("#"+name).animate(animation,time).promise().done(function(){
+                    $("#"+name).remove();
+                    clicked = false;
+                });
+
+            }, memory);
+        }
+    }
+
+    $("#grib").click(function(e){
+        var x = e.clientX;
+        var y = e.clientY;
+        gribble(x, y);
     });
+
+
+    function demo_gribble(){
+        var x = Math.floor(Math.random()* $(document).width());
+        var y = Math.floor(Math.random()* $(document).height());
+        var time = Math.floor(Math.random() * 750 + 50);
+        gribble(x,y);
+        console.log(x);
+        setTimeout(function(){
+            demo_gribble();
+        }, time);
+    }
+    demo_gribble();
 });
