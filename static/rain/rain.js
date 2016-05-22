@@ -1,4 +1,4 @@
-$('head').append("<link rel='stylesheet' type='text/css' href='static/rain/rain.css' />");
+$('head').append("<link rel='stylesheet' type='text/css' href='/static/rain/rain.css' />");
 $(document).ready(function(){
     var size = 10;
     var timeout = 16;
