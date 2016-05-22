@@ -1,5 +1,10 @@
 
 $(document).ready(function(){
+
+    // Picks a random number from 0 to 3.
+    // Based on that number, returns a direction
+    // and the closest point at which the square would
+    // be off the screen.
     function goDirection(){
         var num = Math.floor(Math.random()*4);
         if(num==0){
@@ -21,10 +26,6 @@ $(document).ready(function(){
     // Return a pseudorandom number between 0 and 255
     function rcv(){
         return Math.floor(Math.random()*256);
-    }
-
-    function getij(name){
-        return name.split('_').slice(0,2).map(Number);
     }
 
     $('body').append("<div id='grib-container'><div id='grib'></div></div>");
@@ -73,8 +74,8 @@ $(document).ready(function(){
             'border-radius': '2px',
             'top': index_Y * size[1],
             'left': index_X * size[0],
-            'width': size[0],
-            'height': size[1]
+            'width': size[0]-3,
+            'height': size[1]-3
         });
 
         if(!clicked){
