@@ -108,7 +108,6 @@ $(document).ready(function(){
         var y = Math.floor(Math.random()* $(document).height());
         var time = Math.floor(Math.random() * 750 + 50);
         gribble(x,y);
-        console.log(x);
         setTimeout(function(){
             demo_gribble();
         }, time);
