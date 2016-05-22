@@ -35,7 +35,13 @@ function gribble(x,y){
     var name = gribset(x,y);
     // Now pause for a bit before
     setTimeout(function(){
-        shunt(name);
+        if(Math.floor(Math.random()*100)%10==0){
+            $("#"+name).fadeOut(250).promise().done(function(){
+                $("#"+name).remove();
+            });
+        } else {
+            shunt(name);
+        }
     }, memory);
 }
 
