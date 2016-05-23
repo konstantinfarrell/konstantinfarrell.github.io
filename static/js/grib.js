@@ -24,13 +24,14 @@ function goDirection(){
     } else if(num==1){
         return ['left', $(document).width()];
     } else if(num==2){
-        return ['top', -30];
+        return ['top', -100];
     } else if(num==3){
-        return ['left', -30];
+        return ['left', -100];
     }
 }
 
 function gribble(x,y){
+    var memory = Math.floor(Math.random()*2000+2000)
     // Create a gribble-tile, and shunt it.
     var name = gribset(x,y);
     // Now pause for a bit before
@@ -57,7 +58,7 @@ function gribset(x,y){
     if(exists == null){
         $("body").append("<div id='"+name+"'></div>");
         $("#"+name).css({'display': 'none'});
-        $("#"+name).fadeIn(200).promise();
+        $("#"+name).fadeIn(250).promise();
     }
 
     // Now add the color, place the tile,
