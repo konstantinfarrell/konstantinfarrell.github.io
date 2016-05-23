@@ -9,29 +9,23 @@ permalink: /about/
 ## My name is Konstantin. I make things go.
 
 I'm a student at Portland State University majoring in Computer Science with a minor in Mathematics.
-My inventory of languages includes:
+I've done work in a variety of languages, including:
 
 - Python
 - C/C++
-- Bash
+- JavaScript
 - PHP
 - C#/.NET
 - Java
-- JavaScript/jQuery
+- Bash
 - HTML/CSS/SASS
 - SQL/MySQL/PostgreSQL
 
-And I am also proficient in the following frameworks:
+I currently work at Portland State University's department for Academic and Research Computing. (Until June 30th)
+We develop, host, and maintain custom, data-driven research web applications for the university and other clients.
+Currently, we maintain and provide support for over 100 applications spanning many widely-used frameworks.
 
-- Django
-- LAMP Stack
-- ELK Stack
-- Jekyll
-
-I currently work at Portland State University's department for Academic and Research Computing.
-We develop, host, and maintain custom, data-driven research web applications for the university
-and other clients. Currently, we maintain and provide support for over 100 applications spanning
-many widely-used frameworks.
+During my time here I've built applications using Python and the Django Framework, and PHP/LAMP stack.
 
 My hobbies include writing code, creating music or art, tinkering with electronics and
 building and inventing.
