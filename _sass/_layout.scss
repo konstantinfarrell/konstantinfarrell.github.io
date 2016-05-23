@@ -299,6 +299,11 @@
         margin: 0 0 10;
     }
 
+    a {
+        color: $background-color;
+        font-weight: 600;
+    }
+
     @include media-query($on-palm) {
         padding: 10px 10px;
         //overflow-x: scroll;
