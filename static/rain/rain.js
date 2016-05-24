@@ -1,23 +1,19 @@
 $('head').append("<link rel='stylesheet' type='text/css' href='/static/rain/rain.css' />");
-$(document).ready(function(){
-    var size = 10;
-    var timeout = 16;
-    var height = 6;
-    var max_speed = 4000;
-    var max_lines = Math.floor(($(window).width()/150));
-    var start_y = -1 * height * size;
 
-    $('body').append('<div id="background"></div>');
-    $('#background').css('top', 0);
-    var html = "<div id='cell-container'></div>";
-    $('#background').append(html);
+var size = 10;
+var timeout = 16;
+var height = 6;
+var max_speed = 4000;
+var max_lines = Math.floor(($(window).width()/150));
+var start_y = -1 * height * size;
 
-    function drip(cell, x, speed){
-        var tops = $("#"+cell).position().top - $("#"+cell).height();
-        $("#"+cell).css({
-            'top': tops,
-            'left': x
-        });
+function drip(cell, x, speed){
+    var tops = $("#"+cell).position().top - $("#"+cell).height();
+    $("#"+cell).css({
+        'top': tops,
+        'left': x
+    });
+    if(animation_choice == 'rain'){
         $("#"+cell).animate({'top': $(window).height() }, speed, "linear", function(){
             setTimeout(function(){
                 var next_x = (Math.round(Math.random()*($(window).width()/size))-1)*size;
@@ -31,6 +27,10 @@ $(document).ready(function(){
             }, 20);
         });
     }
+}
+
+function demo_drips(){
+    size = 10;
 
     for(i = 0; i < max_lines; i++){
         var speed = Math.floor(Math.random()*max_speed)+3000;
@@ -41,7 +41,19 @@ $(document).ready(function(){
         $("#"+cell_name).css('left', next_x);
         $("#"+cell_name).css({'width': size, 'height': height * size });
         $("#"+cell_name).css('top', start_y - next_x);
-        drip(cell_name, next_x, speed);
+        if(animation_choice == 'rain'){
+            drip(cell_name, next_x, speed);
+        }
     }
+}
 
+$(document).ready(function(){
+    $('body').append('<div id="background"></div>');
+    $('#background').css('top', 0);
+    var html = "<div id='cell-container'></div>";
+    $('#background').append(html);
+
+    if(animation_choice == 'rain'){
+        demo_drips();
+    }
 });

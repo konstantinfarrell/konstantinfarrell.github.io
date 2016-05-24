@@ -5,6 +5,35 @@
     <title>Konstantin Farrell</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
+    <script>
+        var animations = [
+            'demo gribble',
+            'rain',
+        ];
+        var count = 0;
+        var animation_choice = animations[count];
+        var pause = 10000;
+        function animate_it(){
+            setTimeout(function(){
+                count = (count + 1) % animations.length;
+                animation_choice = animations[count];
+                if(count == 0){
+                    pause = 10000;
+                    setTimeout(function(){
+                        demo_gribble();
+                    }, 2000);
+                } else if(count == 1){
+                    pause = 13000;
+                    setTimeout(function(){
+                        demo_drips();
+                    }, 2000);
+                }
+                animate_it();
+            }, pause);
+        }
+        animate_it();
+    </script>
+    <script type="text/javascript" src="/static/js/grib2.js"></script>
     <script type="text/javascript" src="/static/rain/rain.js"></script>
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -19,6 +48,7 @@
 
     </script>
     <script>
+
         window.fadeIn = function(obj){
             $(obj).fadeIn(1000);
         }
