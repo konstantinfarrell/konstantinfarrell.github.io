@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+    <div class="page-content">
+        <div class="container">
+            <div class="pdf">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    <script>
+        function frameResize(){
+            $("iframe").height(1.3 * $("iframe").width());
+        }
+        frameResize();
+        $(window).resize(function(){
+            frameResize();
+        });
+    </script>
+
+    {% include footer.html %}
+
+  </body>
+</html>
