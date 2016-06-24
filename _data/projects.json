@@ -16,10 +16,10 @@
         "team": "Solo"
     },
     {
-        "name": "Tree-Stories",
-        "website": "https://climatecope.research.pdx.edu/cs/",
+        "name": "Canopy-Story",
+        "website": "http://canopystory.org/",
         "image": "/files/img/tree_stories_small.png",
-        "description": "Tree Stories is a project that incorporated the Leaflet API, Facebook and Google's PHP API's for Single Sign On, and a custom PHP framework and database backend. The objective was to take the existing project and implement social media support for easy user authentication, to allow the site to essentially become its own social network based around Portland Trees. Users are able to post stories and images, as well as view posts from other users. Users can search and filter posts too, and administrators are able to moderate the site content without needing to get on a database. The site was sponsored by the Sustaining Urban Places Research (SUPR) Lab at Portland State University",
+        "description": "Canopy Story is a project that incorporated the Leaflet API, Facebook and Google's PHP API's for Single Sign On, and a custom PHP framework and database backend. The objective was to take the existing project and implement social media support for easy user authentication, to allow the site to essentially become its own social network based around Portland Trees. Users are able to post stories and images, as well as view posts from other users. Users can search and filter posts too, and administrators are able to moderate the site content without needing to get on a database. The site was sponsored by the Sustaining Urban Places Research (SUPR) Lab at Portland State University",
         "composition": [
             "PHP",
             "MySQL",
@@ -31,7 +31,7 @@
         ],
         "started": "December, 2015",
         "status": "Post-Production",
-        "link": "/projects/treestories/",
+        "link": "/projects/canopystory/",
         "category": "PHP Site",
         "team": "Solo - ARC"
     },
