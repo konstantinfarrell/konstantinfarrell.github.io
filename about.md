@@ -8,7 +8,7 @@ permalink: /about/
 
 ## My name is Konstantin. I make things go.
 
-I'm a student at Portland State University majoring in Computer Science with a minor in Mathematics.
+I'm a Python programmer, web developer, and a student at Portland State University, majoring in Computer Science with a minor in Mathematics.
 I've done work in a variety of languages, including:
 
 - Python
