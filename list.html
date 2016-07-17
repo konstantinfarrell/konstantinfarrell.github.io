@@ -7,7 +7,7 @@ permalink: /posts/
     <div class="row">
         <div class="col-md-8">
             <h3><a href="{{ post.url | prepend: side.baseurl }}">{{ post.title }}</a></h3>
-            <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong>. {{ post.exerpt | strip_html | truncate: 250 }}</a></small></p>
+            <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong>. {{ post.exerpt | strip_html | truncate: 250 }}</small></p>
         <p><strong>Category: </strong>
         {% if post.categories %}
             {% for category in post.categories %}
