@@ -2,4 +2,4 @@
 
 set -e
 
-jekyll build && htmlproofer _site/ --disable-external --url-ignore "/#.*/"
+bundle exec jekyll build && htmlproofer _site/ --disable-external --url-ignore "/#.*/"
