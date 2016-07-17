@@ -8,7 +8,7 @@ layout: default
         {% for project in site.data.projects %}
             <div id='{{ project.name }}_div' class='project-image'>
                 <img id='{{ project.name }}_img' src="{{ project.image }}" alt="{{ project.name }}" style="visibility: hidden;"></img>
-                <a href='{{ project.website }}'><div class='overlay'></div></a>
+                {% if project.website != "N/A" %}<a href='{{ project.website }}'><div class='overlay'></div></a>{% else %}<div class='overlay'></div>{% endif %}
             </div>
             <script>
             $("#{{ project.name }}_div").css({
