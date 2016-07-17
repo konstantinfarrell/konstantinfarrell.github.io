@@ -17,3 +17,5 @@ permalink: /:year/:month/:title
 markdown: kramdown
 gems:
     - jekyll-feed
+
+exclude: [vendor]
