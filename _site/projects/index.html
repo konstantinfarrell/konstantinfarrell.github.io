@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" />
+    
+    
+    <title>Projects</title>
+    <meta name="description" content="Konstantin is a full-stack web developer from Portland, Oregon. In his spare time he can be found tinkering away at some code or circuits, making music on whatever instrument he can find, or hacking away at about 4 projects at once. He also occasionally has a decent game of DotA.
+">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-35940548-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://konstantinfarrell.github.io/projects/">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link type="application/atom+xml" rel="alternate" href="http://konstantinfarrell.github.io/feed.xml" title="Konstantin's Box" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Konstantin's Box</a>
+
+    <nav class="site-nav">
+      <button class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </button>
+
+      <div class="trigger">
+        
+          
+            
+          
+        
+          
+            
+              <a class="page-link" href="/about/">About Me</a>
+            
+          
+        
+          
+        
+          
+        
+          
+            
+              <a class="page-link" href="/projects/">Projects</a>
+            
+          
+        
+          
+            
+              <a class="page-link" href="/posts/">Blog</a>
+            
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class='project'>
+    <h1>Projects</h1>
+    <div class='project-grid'>
+        
+            <div id='Dot-Defendr_div' class='project-image'>
+                <img id='Dot-Defendr_img' src="/files/img/dotdefendr-preview.png" alt="Dot-Defendr" style="visibility: hidden;"></img>
+                <a href='http://dotdefendr.github.io'><div class='overlay'></div></a>
+            </div>
+            <script>
+            $("#Dot-Defendr_div").css({
+                'background-image': 'url("/files/img/dotdefendr-preview.png")',
+                'background-position': 'center',
+                'background-repeat': 'no-repeat',
+                'background-size': 'cover'
+            });
+
+            var width = $('#Dot-Defendr_div').width();
+            var height = $('#Dot-Defendr_div').height();
+            $(".overlay").css({
+                'width': width,
+                'height': height,
+            });
+
+            var overlay_text = '';
+            $("#Dot-Defendr_div").hover(function(e){
+                e.preventDefault;
+                overlay_text = '<div class="overlay-text"><div class="row"><div class="col-md-12"><h3 class="text-center">Dot Defendr</h3></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-7"><strong>HTML5 / JavaScript Game</strong></div><div class="col-md-5"><span class="badge pull-right">Solo</span></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12">Dot Defendr is a 2-dimensional, top-down, shooter defense game where the player controls a &#39;dot&#39; with &#39;wa...</div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12 text-center bottom">Click to See Full Project</div></div></div>';
+                if($(this).html().indexOf('overlay-text') == -1){
+                    $(this).find('div.overlay').append(overlay_text).fadeIn(300).promise().done();
+                }
+            }, function(e){
+                overlay_text = '';
+                $(this).find('div.overlay').find('.overlay-text').fadeOut(300).promise().done(function(e){
+                    e.preventDefault;
+                    $(this).remove('.overlay-text');
+                });
+            });
+            </script>
+        
+            <div id='Canopy-Story_div' class='project-image'>
+                <img id='Canopy-Story_img' src="/files/img/tree_stories_small.png" alt="Canopy-Story" style="visibility: hidden;"></img>
+                <a href='http://canopystory.org/'><div class='overlay'></div></a>
+            </div>
+            <script>
+            $("#Canopy-Story_div").css({
+                'background-image': 'url("/files/img/tree_stories_small.png")',
+                'background-position': 'center',
+                'background-repeat': 'no-repeat',
+                'background-size': 'cover'
+            });
+
+            var width = $('#Canopy-Story_div').width();
+            var height = $('#Canopy-Story_div').height();
+            $(".overlay").css({
+                'width': width,
+                'height': height,
+            });
+
+            var overlay_text = '';
+            $("#Canopy-Story_div").hover(function(e){
+                e.preventDefault;
+                overlay_text = '<div class="overlay-text"><div class="row"><div class="col-md-12"><h3 class="text-center">Canopy Story</h3></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-7"><strong>PHP Site</strong></div><div class="col-md-5"><span class="badge pull-right">Solo - ARC</span></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12">Canopy Story is a project that incorporated the Leaflet API, Facebook and Google&#39;s PHP API&#39;s for Single Sign ...</div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12 text-center bottom">Click to See Full Project</div></div></div>';
+                if($(this).html().indexOf('overlay-text') == -1){
+                    $(this).find('div.overlay').append(overlay_text).fadeIn(300).promise().done();
+                }
+            }, function(e){
+                overlay_text = '';
+                $(this).find('div.overlay').find('.overlay-text').fadeOut(300).promise().done(function(e){
+                    e.preventDefault;
+                    $(this).remove('.overlay-text');
+                });
+            });
+            </script>
+        
+            <div id='Mobile-Learning-Project_div' class='project-image'>
+                <img id='Mobile-Learning-Project_img' src="/files/img/mobile_learning_project_01.png" alt="Mobile-Learning-Project" style="visibility: hidden;"></img>
+                <a href='https://language.research.pdx.edu'><div class='overlay'></div></a>
+            </div>
+            <script>
+            $("#Mobile-Learning-Project_div").css({
+                'background-image': 'url("/files/img/mobile_learning_project_01.png")',
+                'background-position': 'center',
+                'background-repeat': 'no-repeat',
+                'background-size': 'cover'
+            });
+
+            var width = $('#Mobile-Learning-Project_div').width();
+            var height = $('#Mobile-Learning-Project_div').height();
+            $(".overlay").css({
+                'width': width,
+                'height': height,
+            });
+
+            var overlay_text = '';
+            $("#Mobile-Learning-Project_div").hover(function(e){
+                e.preventDefault;
+                overlay_text = '<div class="overlay-text"><div class="row"><div class="col-md-12"><h3 class="text-center">Mobile Learning Project</h3></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-7"><strong>Django Site</strong></div><div class="col-md-5"><span class="badge pull-right">Solo - ARC</span></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12">The Mobile Learning Project brings together faculty from various Portland State University departments and units (Wor...</div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12 text-center bottom">Click to See Full Project</div></div></div>';
+                if($(this).html().indexOf('overlay-text') == -1){
+                    $(this).find('div.overlay').append(overlay_text).fadeIn(300).promise().done();
+                }
+            }, function(e){
+                overlay_text = '';
+                $(this).find('div.overlay').find('.overlay-text').fadeOut(300).promise().done(function(e){
+                    e.preventDefault;
+                    $(this).remove('.overlay-text');
+                });
+            });
+            </script>
+        
+            <div id='TAOS_div' class='project-image'>
+                <img id='TAOS_img' src="/files/img/taos_01.png" alt="TAOS" style="visibility: hidden;"></img>
+                <a href='https://taos.tel.pdx.edu/'><div class='overlay'></div></a>
+            </div>
+            <script>
+            $("#TAOS_div").css({
+                'background-image': 'url("/files/img/taos_01.png")',
+                'background-position': 'center',
+                'background-repeat': 'no-repeat',
+                'background-size': 'cover'
+            });
+
+            var width = $('#TAOS_div').width();
+            var height = $('#TAOS_div').height();
+            $(".overlay").css({
+                'width': width,
+                'height': height,
+            });
+
+            var overlay_text = '';
+            $("#TAOS_div").hover(function(e){
+                e.preventDefault;
+                overlay_text = '<div class="overlay-text"><div class="row"><div class="col-md-12"><h3 class="text-center">TAOS</h3></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-7"><strong>PHP Site</strong></div><div class="col-md-5"><span class="badge pull-right">ARC</span></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12">The refactoring of the Telecom Automated Order System (TAOS) was a PHP site tasked to ARC with the intention of updat...</div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12 text-center bottom">Click to See Full Project</div></div></div>';
+                if($(this).html().indexOf('overlay-text') == -1){
+                    $(this).find('div.overlay').append(overlay_text).fadeIn(300).promise().done();
+                }
+            }, function(e){
+                overlay_text = '';
+                $(this).find('div.overlay').find('.overlay-text').fadeOut(300).promise().done(function(e){
+                    e.preventDefault;
+                    $(this).remove('.overlay-text');
+                });
+            });
+            </script>
+        
+            <div id='Oregon-Invasives-Hotline_div' class='project-image'>
+                <img id='Oregon-Invasives-Hotline_img' src="/files/img/invasives_small.png" alt="Oregon-Invasives-Hotline" style="visibility: hidden;"></img>
+                <a href='https://oregoninvasiveshotline.org/'><div class='overlay'></div></a>
+            </div>
+            <script>
+            $("#Oregon-Invasives-Hotline_div").css({
+                'background-image': 'url("/files/img/invasives_small.png")',
+                'background-position': 'center',
+                'background-repeat': 'no-repeat',
+                'background-size': 'cover'
+            });
+
+            var width = $('#Oregon-Invasives-Hotline_div').width();
+            var height = $('#Oregon-Invasives-Hotline_div').height();
+            $(".overlay").css({
+                'width': width,
+                'height': height,
+            });
+
+            var overlay_text = '';
+            $("#Oregon-Invasives-Hotline_div").hover(function(e){
+                e.preventDefault;
+                overlay_text = '<div class="overlay-text"><div class="row"><div class="col-md-12"><h3 class="text-center">Oregon Invasives Hotline</h3></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-7"><strong>Django Site</strong></div><div class="col-md-5"><span class="badge pull-right">ARC</span></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12">The Oregon Invasives Species Hotline is a project inherited and maintained by ARC. The hotline is designed with the u...</div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12 text-center bottom">Click to See Full Project</div></div></div>';
+                if($(this).html().indexOf('overlay-text') == -1){
+                    $(this).find('div.overlay').append(overlay_text).fadeIn(300).promise().done();
+                }
+            }, function(e){
+                overlay_text = '';
+                $(this).find('div.overlay').find('.overlay-text').fadeOut(300).promise().done(function(e){
+                    e.preventDefault;
+                    $(this).remove('.overlay-text');
+                });
+            });
+            </script>
+        
+            <div id='EASA-Web-Forms_div' class='project-image'>
+                <img id='EASA-Web-Forms_img' src="/files/img/easa-02.png" alt="EASA-Web-Forms" style="visibility: hidden;"></img>
+                <div class='overlay'></div>
+            </div>
+            <script>
+            $("#EASA-Web-Forms_div").css({
+                'background-image': 'url("/files/img/easa-02.png")',
+                'background-position': 'center',
+                'background-repeat': 'no-repeat',
+                'background-size': 'cover'
+            });
+
+            var width = $('#EASA-Web-Forms_div').width();
+            var height = $('#EASA-Web-Forms_div').height();
+            $(".overlay").css({
+                'width': width,
+                'height': height,
+            });
+
+            var overlay_text = '';
+            $("#EASA-Web-Forms_div").hover(function(e){
+                e.preventDefault;
+                overlay_text = '<div class="overlay-text"><div class="row"><div class="col-md-12"><h3 class="text-center">EASA Web Forms</h3></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-7"><strong>Django Site</strong></div><div class="col-md-5"><span class="badge pull-right">ARC</span></div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12">EASA Web Forms was a HIPPAA compliant multi-agency, web form service that utilized Django, ElasticSearch and PostgreS...</div></div>';
+                overlay_text += '<div class="row"><div class="col-md-12 text-center bottom">Click to See Full Project</div></div></div>';
+                if($(this).html().indexOf('overlay-text') == -1){
+                    $(this).find('div.overlay').append(overlay_text).fadeIn(300).promise().done();
+                }
+            }, function(e){
+                overlay_text = '';
+                $(this).find('div.overlay').find('.overlay-text').fadeOut(300).promise().done(function(e){
+                    e.preventDefault;
+                    $(this).remove('.overlay-text');
+                });
+            });
+            </script>
+        
+    </div>
+    <script>
+        function place(){
+            var max_per_row = Math.floor($('.project').width()/$('.project-image').width());
+            var max_width = max_per_row *($('.project-image').width()+5.5);
+            $('.project-grid').width(max_width);
+            $('.project-grid').position().left = ($('.project').width() - max_width)/2;
+        }
+        place();
+        $(window).resize(function(){
+            place();
+        });
+    </script>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Konstantin's Box</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:konstantinfarrell@gmail.com">konstantinfarrell@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/konstantinfarrell">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">konstantinfarrell</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/that_konstantin">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">that_konstantin</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Konstantin is a full-stack web developer from Portland, Oregon. In his spare time he can be found tinkering away at some code or circuits, making music on whatever instrument he can find, or hacking away at about 4 projects at once. He also occasionally has a decent game of DotA.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

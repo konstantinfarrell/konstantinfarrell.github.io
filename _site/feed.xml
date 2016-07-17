@@ -1,0 +1,1263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Konstantin&#39;s Box</title>
+    <description>Konstantin is a full-stack web developer from Portland, Oregon. In his spare time he can be found tinkering away at some code or circuits, making music on whatever instrument he can find, or hacking away at about 4 projects at once. He also occasionally has a decent game of DotA.
+</description>
+    <link>http://konstantinfarrell.github.io/</link>
+    <atom:link href="http://konstantinfarrell.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 16 Jul 2016 23:52:20 -0700</pubDate>
+    <lastBuildDate>Sat, 16 Jul 2016 23:52:20 -0700</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Docker On Windows Real Quick</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/files/img/docker-facebook.png&quot; alt=&quot;Docker Banner&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ve got a Windows computer. You want to know what the deal with Docker is.&lt;/p&gt;
+
+&lt;p&gt;You don’t wanna read a whole lot.&lt;/p&gt;
+
+&lt;p&gt;Here’s how you start.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-1-download&quot;&gt;Step 1: Download&lt;/h2&gt;
+
+&lt;p&gt;Download Docker Toolbox from the following link.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.docker.com/products/docker-toolbox&quot;&gt;https://www.docker.com/products/docker-toolbox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/files/img/docker-image-1.png&quot; alt=&quot;Docker main page&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-install&quot;&gt;Step 2: Install&lt;/h2&gt;
+
+&lt;p&gt;Double click the executable and leave all the default options checked.&lt;/p&gt;
+
+&lt;p&gt;This will install Docker, the Docker Quickstart Terminal, Kitematic and
+a variety of other tools Docker uses.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/files/img/docker-image-2.png&quot; alt=&quot;Docker Installer Dialog&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-run-quickstart-terminal&quot;&gt;Step 3: Run Quickstart Terminal&lt;/h2&gt;
+
+&lt;p&gt;After the install, run the quickstart terminal.
+If you see an ASCII whale, you’re in the clear.&lt;/p&gt;
+
+&lt;p&gt;Make a note the IP address it provides. It is important.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/files/img/docker-screenshot.png&quot; alt=&quot;Docker Shell&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-run-kitematic--select-a-container&quot;&gt;Step 4: Run Kitematic &amp;amp; Select a Container&lt;/h2&gt;
+
+&lt;p&gt;Run Kitematic. From here you can add &amp;amp; run any container environment with ease.&lt;/p&gt;
+
+&lt;p&gt;As an example I will add a new CentOS box. All I need to do is search for “Centos”, and click the
+“Create” button on the repository I have chosen.&lt;/p&gt;
+
+&lt;p&gt;This will download and install the image, and add a new entry to my list of containers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/files/img/docker-kitematic-centos.png&quot; alt=&quot;Kitematic Search&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-5-run-the-container--connect-to-docker&quot;&gt;Step 5: Run The Container &amp;amp; Connect to Docker&lt;/h2&gt;
+
+&lt;p&gt;The container should have started automatically after installation. If it didn’t, you can select
+it and press the “Start” button in Kitematic, or you can wait until after you have connected to the VM.&lt;/p&gt;
+
+&lt;p&gt;To proceed, you can use either an SSH client like PuTTY, or just use the Docker Quickstart Terminal.&lt;/p&gt;
+
+&lt;h5 id=&quot;if-youd-just-like-to-use-the-quickstart-terminal-proceed-to-step-6&quot;&gt;If you’d just like to use the Quickstart Terminal, proceed to Step 6.&lt;/h5&gt;
+
+&lt;p&gt;If you’d like to use SSH, once the machine is set up and running, SSH into the Docker VM with
+the IP address provided earlier, using PuTTY or another SSH client.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DEFAULT LOGIN CREDENTIALS
+
+Username: docker
+Password: tcuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/files/img/docker-putty.png&quot; alt=&quot;PuTTY Connect&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-6-attach-your-session&quot;&gt;Step 6: Attach Your Session&lt;/h2&gt;
+
+&lt;p&gt;You’re currently in the Boot2Docker VM. You can choose and attach your session to any
+of your containers from here.&lt;/p&gt;
+
+&lt;p&gt;Here are some useful commands to know&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker ps               // Shows all running containers
+docker start &amp;lt;name&amp;gt;     // Starts the container named &amp;lt;name&amp;gt;
+docker attach &amp;lt;name&amp;gt;    // Attaches your session to the container &amp;lt;name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;docker attach centos&lt;/code&gt; to attach the session to the container.&lt;/p&gt;
+
+&lt;p&gt;Your session should look something like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/files/img/docker-attach.png&quot; alt=&quot;Docker Attach&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;and-thats-literally-it&quot;&gt;And That’s Literally It.&lt;/h3&gt;
+
+&lt;p&gt;You are connected to your environment.&lt;/p&gt;
+
+&lt;p&gt;That took all of what? 5 minutes?&lt;/p&gt;
+
+&lt;p&gt;Here’s a &lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/&quot;&gt;link&lt;/a&gt; to the
+Docker Command Line API if you’d like a comprehensive list of commands.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Jun 2016 00:00:00 -0700</pubDate>
+        <link>http://konstantinfarrell.github.io/2016/06/docker</link>
+        <guid isPermaLink="true">http://konstantinfarrell.github.io/2016/06/docker</guid>
+        
+        
+        <category>Tutorial</category>
+        
+      </item>
+    
+      <item>
+        <title>An Exercize in JavaScript Animations</title>
+        <description>&lt;iframe src=&quot;/gribble/&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;how-about-that-eh&quot;&gt;How About That Eh?&lt;/h1&gt;
+
+&lt;p&gt;Pretty neat, huh? Now try clicking on it. Totally pointless right? Nah it’s kinda nice to look at.&lt;/p&gt;
+
+&lt;p&gt;Looks like something you wanna make? Ok lets make it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jsfiddle.net/28p6ox9b/&quot;&gt;Here’s a fiddle&lt;/a&gt; if you’d like to follow along.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-1-setup-the-environment&quot;&gt;Step 1: Setup the Environment&lt;/h2&gt;
+
+&lt;p&gt;Lets start this off in a new &lt;code class=&quot;highlighter-rouge&quot;&gt;.js&lt;/code&gt; file, with a standard &lt;code class=&quot;highlighter-rouge&quot;&gt;$(document).ready();&lt;/code&gt; call.&lt;/p&gt;
+
+&lt;p&gt;In one of my previous posts, I defined two functions: &lt;code class=&quot;highlighter-rouge&quot;&gt;toCSS()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;rcv()&lt;/code&gt;. We’re going to reuse that code.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Take RGB values and return a CSS formatted string representation.
+function toCSS(r,g,b){
+    return &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;
+}
+
+// Return a pseudorandom number between 0 and 255
+function rcv(){
+    return Math.floor(Math.random()*256);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;From inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;$(document).ready();&lt;/code&gt; call, set the background to something with a nice dark color that isn’t too sharp. &lt;code class=&quot;highlighter-rouge&quot;&gt;#111&lt;/code&gt; works fine in this case.
+Make the body the fill the viewport, and make sure all overflow data is hidden.&lt;/p&gt;
+
+&lt;p&gt;We’re going to want to make sure to set a size for our tiles, and give them a delay before shunting them out of the screen.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;30&lt;/code&gt; pixels is what I used as the default size. I also defined a delay of 3 seconds.&lt;/p&gt;
+
+&lt;p&gt;Right now your code should look something like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var size = 30;
+
+// Take RGB values and return a CSS formatted string representation.
+function toCSS(r,g,b){
+    return &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;
+}
+
+// Return a pseudorandom number between 0 and 255
+function rcv(){
+    return Math.floor(Math.random()*256);
+}
+
+$(document).ready(function(e){
+    // Style up the body.
+    $(&#39;body&#39;).css({
+        &#39;width&#39;: &#39;100%&#39;,
+        &#39;height&#39;: &#39;100%&#39;,
+        &#39;background-color&#39;: &#39;#111&#39;,
+        &#39;overflow&#39;: &#39;hidden&#39;,
+        &#39;position&#39;: &#39;absolute&#39;
+    });
+}):
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;step-2-place-a-tile&quot;&gt;Step 2: Place A Tile&lt;/h2&gt;
+
+&lt;p&gt;It would be nice to have a function with which we could define a tile based on its coordinates, and get some information back for future reference.
+This function should take the coordinates as arguments and place the tile respectively. However, we’d like to maintain a grid-like structure for
+tile placement.&lt;/p&gt;
+
+&lt;p&gt;To do this, we can take the x,y coordinates and create a placement index based on the floor of the coordinate divided by the size
+of the tile. That is, we divide the coordinate by the size, and round down.
+Since this gives us a unique way to identify each tile, it can be used as part of the tile id.
+Before placing the tile, we should check to make sure one with that identifier doesn’t already exist.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var index_X = Math.floor(x/size);
+var index_Y = Math.floor(y/size);
+var name = index_X + &quot;_&quot; + index_Y + &quot;_tile&quot;;
+var exists = document.getElementById(name);
+if(exists == null){
+    $(&quot;body&quot;).append(&quot;&amp;lt;div id=&#39;&quot;+name+&quot;&#39;&amp;gt;&amp;lt;/div&amp;gt;&quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Great! This works, except that the tile just appears in its space. It would look nicer if there was some sort of transition animation.
+Inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;if()&lt;/code&gt; statement, add the following lines.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(&quot;#&quot;+name).css({&#39;display&#39;: &#39;none&#39;});
+$(&quot;#&quot;+name).fadeIn(250).promise();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This will add the element, but won’t immediately show it on the page. It will then take 1/4 of a second to fade in.&lt;/p&gt;
+
+&lt;p&gt;At this point, a color can be generated, and all we have to do is modify the css to pretty up the tile.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var color = toCSS(rcv(), rcv(), rcv());
+$(&quot;#&quot;+name).css({
+    &#39;position&#39;: &#39;absolute&#39;,
+    &#39;background-color&#39;: color,
+    &#39;box-shadow&#39;: &#39;0 0 1px &#39;+color,
+    &#39;border-radius&#39;: &#39;2px&#39;,
+    &#39;top&#39;: index_Y * size,
+    &#39;left&#39;: index_X * size,
+    &#39;width&#39;: size-3,
+    &#39;height&#39;: size-3
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we can return the name as the identifier. Just like that, the tile has been placed.&lt;/p&gt;
+
+&lt;h4 id=&quot;here-is-the-full-code-for-the-function&quot;&gt;Here is the full code for the function.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function gribset(x,y){
+    var index_X = Math.floor(x/size);
+    var index_Y = Math.floor(y/size);
+    var name = index_X + &quot;_&quot; + index_Y + &quot;_cell&quot;;
+    var exists = document.getElementById(name);
+    if(exists == null){
+        $(&quot;body&quot;).append(&quot;&amp;lt;div id=&#39;&quot;+name+&quot;&#39;&amp;gt;&amp;lt;/div&amp;gt;&quot;);
+        $(&quot;#&quot;+name).css({&#39;display&#39;: &#39;none&#39;});
+        $(&quot;#&quot;+name).fadeIn(250).promise();
+    }
+
+    var color = toCSS(rcv(), rcv(), rcv());
+    $(&quot;#&quot;+name).css({
+        &#39;position&#39;: &#39;absolute&#39;,
+        &#39;background-color&#39;: color,
+        &#39;box-shadow&#39;: &#39;0 0 1px &#39;+color,
+        &#39;border-radius&#39;: &#39;2px&#39;,
+        &#39;top&#39;: index_Y * size,
+        &#39;left&#39;: index_X * size,
+        &#39;width&#39;: size-3,
+        &#39;height&#39;: size-3
+    });
+    return name;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;step-3-pick-a-direction&quot;&gt;Step 3: Pick a Direction&lt;/h2&gt;
+
+&lt;p&gt;We’re gonna need one more helper function to determine the direction that each tile should travel.
+Since this is essentially a random process, we can simply pick a random number from 0-3, and use a
+series of if statements to determine the information that will be returned.&lt;/p&gt;
+
+&lt;p&gt;The function should return the direction of travel (vertical or horizontal aka top or left), and the coordinate point
+the tile will travel to. Something off the edge of the screen to give the illusion the tile has disappeared.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function goDirection(){
+    var num = Math.floor(Math.random()*4);
+    if(num==0){
+        return [&#39;top&#39;, $(document).height()];
+    } else if(num==1){
+        return [&#39;left&#39;, $(document).width()];
+    } else if(num==2){
+        return [&#39;top&#39;, -100];
+    } else if(num==3){
+        return [&#39;left&#39;, -100];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;step-4-shunt&quot;&gt;Step 4: Shunt!&lt;/h2&gt;
+
+&lt;p&gt;Great! Now we’re ready to make the tiles move! This is the fun part.&lt;/p&gt;
+
+&lt;p&gt;Lets use the function we defined above to get a direction and coordinate point.
+Lets also randomize the speed at which the tiles move by defining a time interval. Something between
+300ms and 900ms.&lt;/p&gt;
+
+&lt;p&gt;Once we’ve got that, we can call the animation.&lt;/p&gt;
+
+&lt;p&gt;Here is the code.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function shunt(name){
+    var d = goDirection();
+    var direction = d[0];
+    var magnitude = d[1];
+    var animation = {};
+    var time = Math.floor(Math.random() * 600 + 300);
+    animation[direction] = magnitude;
+    $(&quot;#&quot;+name).animate(animation,time).promise().done(function(){
+        $(&quot;#&quot;+name).remove();
+    });
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Notice the last line of the function. It calls the animation, then &lt;code class=&quot;highlighter-rouge&quot;&gt;.promise()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.done()&lt;/code&gt;.
+This ensures that the following code will not be executed until the current code has finished
+processing.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-5-put-it-all-together&quot;&gt;Step 5: Put it All Together&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve written all the helper functions we’re going to need, it’s time to write the function
+that puts them all together.&lt;/p&gt;
+
+&lt;p&gt;This function should be able to create a tile, place it, shunt it, then remove it.
+It should take the coordinate points as arguments, and feed them to the &lt;code class=&quot;highlighter-rouge&quot;&gt;gribset&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;p&gt;This will place a tile on the page, set its color, and animate its appearance.
+Then after a brief pause, the function should either make the tile fade out, or shunt if off the page.&lt;/p&gt;
+
+&lt;p&gt;Since we’re in the business of randomizing values, we’ll do that with the pause time-interval value as well.&lt;/p&gt;
+
+&lt;p&gt;Here’s how my function looks.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function gribble(x,y){
+    var name = gribset(x,y);
+    var memory = Math.floor(Math.random()*2000+2000)
+    setTimeout(function(){
+        if(Math.floor(Math.random()*100)%10==0){
+            $(&quot;#&quot;+name).fadeOut(250).promise().done(function(){
+                $(&quot;#&quot;+name).remove();
+            });
+        } else {
+            shunt(name);
+        }
+    }, memory);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As you can see, there is a 1/10 chance of the tile disappearing after a time interval between 2 and 4 seconds.
+If it doesn’t disappear, it gets shunted off the screen.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-6-bring-it-to-life&quot;&gt;Step 6: Bring it to Life&lt;/h2&gt;
+
+&lt;p&gt;We’ve done all the heavy lifting at this point. In order to get the effect seen in the frame at the top of the page,
+the function should be called after random time intervals, with random coordinates.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function demo_gribble(){
+    var x = Math.floor(Math.random()* $(document).width());
+    var y = Math.floor(Math.random()* $(document).height());
+    var time = Math.floor(Math.random() * 450 + 50);
+    gribble(x,y);
+    setTimeout(function(){
+        demo_gribble();
+    }, time);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;All that’s left is to add a call to this in the &lt;code class=&quot;highlighter-rouge&quot;&gt;$(document).ready();&lt;/code&gt; function.
+Like so.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(document).ready(function(e){
+    $(&#39;body&#39;).css({
+        &#39;width&#39;: &#39;100%&#39;,
+        &#39;height&#39;: &#39;100%&#39;,
+        &#39;background-color&#39;: &#39;#111&#39;,
+        &#39;overflow&#39;: &#39;hidden&#39;,
+        &#39;position&#39;: &#39;absolute&#39;
+    });
+
+    demo_gribble();
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;step-7-click-behavior-optional&quot;&gt;Step 7: Click Behavior (Optional)&lt;/h2&gt;
+
+&lt;p&gt;This part is optional, but it would be nice if the user was able to click on the page to generate a tile at that location.
+All you have to do is add this to the &lt;code class=&quot;highlighter-rouge&quot;&gt;$(document).ready()&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(document).click(function(e){
+    var x = e.clientX;
+    var y = e.clientY;
+    gribble(x, y);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And it’s all done. That’s all you need.&lt;/p&gt;
+
+&lt;h2 id=&quot;here-is-the-full-code&quot;&gt;Here Is The Full Code&lt;/h2&gt;
+
+&lt;p&gt;Along with a &lt;a href=&quot;/gribble/&quot;&gt;link&lt;/a&gt; to the full-page version&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var size = 30;
+
+// Take RGB values and return a CSS formatted string representation.
+function toCSS(r,g,b){
+    return &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;
+}
+
+// Return a pseudorandom number between 0 and 255
+function rcv(){
+    return Math.floor(Math.random()*256);
+}
+
+// Picks a random number from 0 to 3.
+// Based on that number, returns a direction
+// and the closest point at which the tile would
+// be off the screen.
+function goDirection(){
+    var num = Math.floor(Math.random()*4);
+    if(num==0){
+        return [&#39;top&#39;, $(document).height()];
+    } else if(num==1){
+        return [&#39;left&#39;, $(document).width()];
+    } else if(num==2){
+        return [&#39;top&#39;, -100];
+    } else if(num==3){
+        return [&#39;left&#39;, -100];
+    }
+}
+
+function gribble(x,y){
+    var memory = Math.floor(Math.random()*2000+2000)
+    // Create a gribble-tile, and shunt it.
+    var name = gribset(x,y);
+    // Now pause for a bit before
+    setTimeout(function(){
+        if(Math.floor(Math.random()*100)%10==0){
+            $(&quot;#&quot;+name).fadeOut(250).promise().done(function(){
+                $(&quot;#&quot;+name).remove();
+            });
+        } else {
+            shunt(name);
+        }
+    }, memory);
+}
+
+function gribset(x,y){
+    // From the x,y coordinates, grab the nearest
+    // grid space and make sure there isn&#39;t something
+    // in that space already. (We dont need to stack,
+    // layers, just change the color of the last one)
+    var index_X = Math.floor(x/size);
+    var index_Y = Math.floor(y/size);
+    var name = index_X + &quot;_&quot; + index_Y + &quot;_cell&quot;;
+    var exists = document.getElementById(name);
+    if(exists == null){
+        $(&quot;body&quot;).append(&quot;&amp;lt;div id=&#39;&quot;+name+&quot;&#39;&amp;gt;&amp;lt;/div&amp;gt;&quot;);
+        $(&quot;#&quot;+name).css({&#39;display&#39;: &#39;none&#39;});
+        $(&quot;#&quot;+name).fadeIn(250).promise();
+    }
+
+    // Now add the color, place the tile,
+    // and pretty it up with some css.
+    var color = toCSS(rcv(), rcv(), rcv());
+    $(&quot;#&quot;+name).css({
+        &#39;position&#39;: &#39;absolute&#39;,
+        &#39;background-color&#39;: color,
+        &#39;box-shadow&#39;: &#39;0 0 1px &#39;+color,
+        &#39;border-radius&#39;: &#39;2px&#39;,
+        &#39;top&#39;: index_Y * size,
+        &#39;left&#39;: index_X * size,
+        &#39;width&#39;: size-3,
+        &#39;height&#39;: size-3
+    });
+    return name;
+}
+
+// Pick a direction, and animate the
+// movement of the tile to the outside
+// of the page. Once that is done, remove it.
+function shunt(name){
+    var d = goDirection();
+    var direction = d[0];
+    var magnitude = d[1];
+    var animation = {};
+    var time = Math.floor(Math.random() * 600 + 300);
+    animation[direction] = magnitude;
+    $(&quot;#&quot;+name).animate(animation,time).promise().done(function(){
+        $(&quot;#&quot;+name).remove();
+    });
+}
+
+// A demo function that places a tile at a random
+// location at a random time interval.
+function demo_gribble(){
+    var x = Math.floor(Math.random()* $(document).width());
+    var y = Math.floor(Math.random()* $(document).height());
+    var time = Math.floor(Math.random() * 450 + 50);
+    gribble(x,y);
+    setTimeout(function(){
+        demo_gribble();
+    }, time);
+}
+
+$(document).ready(function(e){
+    // Style up the body.
+    $(&#39;body&#39;).css({
+        &#39;width&#39;: &#39;100%&#39;,
+        &#39;height&#39;: &#39;100%&#39;,
+        &#39;background-color&#39;: &#39;#111&#39;,
+        &#39;overflow&#39;: &#39;hidden&#39;,
+        &#39;position&#39;: &#39;absolute&#39;
+    });
+
+    // Let users click to add a gribble-tile.
+    $(document).click(function(e){
+        var x = e.clientX;
+        var y = e.clientY;
+        gribble(x, y);
+    });
+
+    // Run the demo function
+    demo_gribble();
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A little bigger than last time, but still not bad at all.
+&lt;a href=&quot;https://jsfiddle.net/28p6ox9b/4/&quot;&gt;Here’s the full fiddle&lt;/a&gt; if you want to mess with it.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 21 May 2016 00:00:00 -0700</pubDate>
+        <link>http://konstantinfarrell.github.io/2016/05/gribble</link>
+        <guid isPermaLink="true">http://konstantinfarrell.github.io/2016/05/gribble</guid>
+        
+        
+        <category>JavaScript,</category>
+        
+        <category>jQuery,</category>
+        
+        <category>Tutorial</category>
+        
+      </item>
+    
+      <item>
+        <title>Xen fsck&#39;d My Grub!</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/files/img/error_loading.png&quot; alt=&quot;Error Loading Operating System&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;one-does-not-simply-post-errors-without-context&quot;&gt;One Does Not Simply Post Errors Without Context&lt;/h1&gt;
+
+&lt;p&gt;So I was installing Xen on my CentOS VM.
+Probably not the best idea to begin with, but it’s a dependency for some
+software that is made by a company I recently applied for a postion at.
+Chances are, once they discover the absolute mess I made just trying to
+get the dang dependencies working, they will have a much easier time
+determining whether to hire me or not.&lt;/p&gt;
+
+&lt;p&gt;After the installation process, you have to reboot, and boot into Xen.
+When I went to do this, I was met with the VirtualBox startup splash screen,
+immediately followed by the grub bootloader screen, and a list
+of operating systems to choose from. Xen was automatically selected so I let
+it count down and begin booting.&lt;/p&gt;
+
+&lt;p&gt;However, instead of booting normally, I was once again met with the VirtualBox
+startup screen, the bootloader, and the list of OS’s.&lt;/p&gt;
+
+&lt;h2 id=&quot;shoulda-backed-it-up&quot;&gt;Shoulda’ Backed It Up.&lt;/h2&gt;
+
+&lt;p&gt;To remedy this situation, I thought I could just wait for the next grub screen to pop up,
+select the old operating system, boot into that, uninstall Xen, and reboot to find my system
+in roughly the same state as before the issue.&lt;/p&gt;
+
+&lt;p&gt;Oh just how wrong I was.&lt;/p&gt;
+
+&lt;p&gt;After booting into my old CentOS config, I went to &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/sysconfig/kernel&lt;/code&gt; and set the param to &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt;.
+Then I punched in&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yum erase kernel-xen
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And that’s where everything went wrong.&lt;/p&gt;
+
+&lt;p&gt;When I went to reboot the VM, I was met with the command line of the grub bootloader.
+And after a few minutes of poking around, I discovered that the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;/boot/grub/grub.conf&lt;/code&gt;
+had been erased entirely. Leaving nothing but an empty file in its place.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-fix-it&quot;&gt;How To Fix It&lt;/h2&gt;
+
+&lt;p&gt;After hiding under my desk in the fetal position failed to produce any desirable results, I thought
+to myself &lt;strong&gt;“maybe the problem would be fixable if I actually tried to fix it.”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;My first attempt involved trying to boot the VM from a live USB, and simply copying the &lt;code class=&quot;highlighter-rouge&quot;&gt;grub.conf&lt;/code&gt;
+file over. However this ultimately proved unsuccessful as the operating systems had different configurations.
+(One was vanilla CentOS, the other was a Vagrant-provisioned CentOS install.)&lt;/p&gt;
+
+&lt;p&gt;Attempting to boot from the other grub file just caused the box to crash.&lt;/p&gt;
+
+&lt;p&gt;Next I tried unmounting the VM, mounting the disk as a filesystem on another VM, and extracting the critical files.
+This worked well, and I was able to move all critical files from the old disk onto the new disk. From there
+I was able to reinstall the VM, and restore it to its original working state by moving all the critical files I
+needed back onto it.&lt;/p&gt;
+
+&lt;p&gt;The only thing left to do was to reinstall some of the programs that had gone missing.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;So maybe this post didn’t go quite as advertised. I wasn’t able to restore the original VM with all the original
+files, but I was able to essentially copy it all into an identical machine. Hopefully next time I can be smart about
+it and actually backup my VM before trying to do something like that.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 May 2016 00:00:00 -0700</pubDate>
+        <link>http://konstantinfarrell.github.io/2016/05/fsck</link>
+        <guid isPermaLink="true">http://konstantinfarrell.github.io/2016/05/fsck</guid>
+        
+        
+        <category>Virtualization,</category>
+        
+        <category>Troubleshooting,</category>
+        
+        <category>Xen,</category>
+        
+        <category>Linux</category>
+        
+      </item>
+    
+      <item>
+        <title>System Font Size in Headless CentOS 7</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/files/img/terminal.png&quot; alt=&quot;Terminal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It took a little bit of digging to find this one, so I’m posting it for future reference.&lt;/p&gt;
+
+&lt;p&gt;If you happen to be running CentOS 7 in headless mode on an AMD processor (can you say niche?)
+and have wanted to change the system font family or size, look no further than &lt;code class=&quot;highlighter-rouge&quot;&gt;terminus-fonts-console&lt;/code&gt;.
+It’s a pretty neat little utility that does it all for you.&lt;/p&gt;
+
+&lt;p&gt;First install it with &lt;code class=&quot;highlighter-rouge&quot;&gt;yum&lt;/code&gt;, then set the system font to whatever you like. The supported font types
+are listed on their package &lt;a href=&quot;https://pkgs.org/centos-6/centos-i386/terminus-fonts-console-4.30-1.el6.noarch.rpm.html&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In my case, I wanted a bigger font, so I used &lt;code class=&quot;highlighter-rouge&quot;&gt;ter-d22b&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yum install terminus-fonts-console
+setfont ter-d22b.psf.gz
+echo setfont ter-d22b.psf.gz &amp;gt;&amp;gt; /etc/rc.local
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This may not apply to you, but in my case it did as I was using a fresh install of CentOS.&lt;/p&gt;
+
+&lt;p&gt;Make sure you set the executable bit.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chmod +x /etc/rc.d/rc.local
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And just like that your new system font is ready to go.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 May 2016 00:00:00 -0700</pubDate>
+        <link>http://konstantinfarrell.github.io/2016/05/fonts</link>
+        <guid isPermaLink="true">http://konstantinfarrell.github.io/2016/05/fonts</guid>
+        
+        
+        <category>Tutorial</category>
+        
+        <category>Linux</category>
+        
+        <category>Centos</category>
+        
+      </item>
+    
+      <item>
+        <title>Backgrounds with Changing Colors</title>
+        <description>&lt;iframe src=&quot;/static/lib/colors.html&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Color changing backgrounds are a pretty cool effect to have on your site if done correctly.
+And they also make for a neat little programming exercise for when you’re bored.
+Here I’m going to give a tutorial on how to implement a color changing
+background in jQuery.&lt;/p&gt;
+
+&lt;p&gt;Feel free to follow along using this &lt;a href=&quot;https://jsfiddle.net/cem8ukfr/8/&quot;&gt;fiddle&lt;/a&gt; I have prepared.&lt;/p&gt;
+
+&lt;h1 id=&quot;step-1-setup-the-page&quot;&gt;Step 1. Setup the page.&lt;/h1&gt;
+
+&lt;p&gt;Lets just start out with a call to the ready function&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(document).ready(function(){
+    // Here&#39;s where everything happens
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you are following along in jsFiddle, this is already supplied along with some css.&lt;/p&gt;
+
+&lt;p&gt;The first order of business is to think about how the background color is defined. The
+easiest way to do this is with RGB values. So we’re going to need 3 variables
+to hold each value between 0 and 255.&lt;/p&gt;
+
+&lt;p&gt;I’m going to define a function to do that instead of typing out the code 3 times.
+Since the rgb values will have to be put into string format before they can be used
+for manipulating css, it would be convenient to do that in this function too.&lt;/p&gt;
+
+&lt;p&gt;So my code now looks like this.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Take RGB values and return a CSS formatted string representation.
+function toCSS(r,g,b){
+    return &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;
+}
+
+// Return a pseudorandom number between 0 and 255
+function rcv(){
+    return Math.floor(Math.random()*256);
+}
+
+$(document).ready(function(){
+    var r = rcv();  // variable for red
+    var g = rcv();  // variable for green
+    var b = rcv();  // variable for blue
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The next step is set the background color, and figure out a way to make it cycle.
+So on the last line of the &lt;code class=&quot;highlighter-rouge&quot;&gt;$(document).ready();&lt;/code&gt; call, right before the closing &lt;code class=&quot;highlighter-rouge&quot;&gt;});&lt;/code&gt;
+, add the following line.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(&#39;body&#39;).css(&#39;background-color&#39;, toCSS(r,g,b));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now if you refresh the page, you should see the background color change to
+something random each time.&lt;/p&gt;
+
+&lt;h1 id=&quot;step-2-make-the-colors-change&quot;&gt;Step 2: Make the colors change&lt;/h1&gt;
+
+&lt;p&gt;This part is a little more tricky. Making the colors change isn’t very difficult because all we
+really need to do is to add a function that slightly changes each color value, and then call that
+function periodically (lets start with every 50ms) in order to achieve a smooth transition.&lt;/p&gt;
+
+&lt;p&gt;To do this we can add this right below the &lt;code class=&quot;highlighter-rouge&quot;&gt;$(&#39;body&#39;).css&lt;/code&gt; call.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var delay = 50;    // pause 50 milliseconds before changing the background.
+function transition(r, g, b){
+    var color = toCSS(r,g,b);                   // get the background color.
+    $(&#39;body&#39;).css(&#39;background-color&#39;, color);   // and apply it.
+
+    setTimeout(function(){
+        transition(r+1, b+1, c+1);      // now increment the colors and call
+    }, delay);                          // the function with the function with
+}                                       // the new values.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The tricky part comes when we consider the fact that each color
+value can only go from 0-255. So if our function incrementally changes
+each color value, it has to be able to handle the restriction on the
+input bounds.&lt;/p&gt;
+
+&lt;p&gt;The immediate solution I jumped to was using the modulo operator.
+However, after a little consideration I came to realize that this would
+enable smooth transitions, only up until a color value reached 255. Then
+there would be a sharp change as that particular color jumped back down to 0.&lt;/p&gt;
+
+&lt;h1 id=&quot;step-3-make-the-colors-changebetter&quot;&gt;Step 3: Make the colors change…better.&lt;/h1&gt;
+
+&lt;p&gt;To address this lets just look at some nice mathematical properties.&lt;/p&gt;
+
+&lt;p&gt;Namely the properties of &lt;code class=&quot;highlighter-rouge&quot;&gt;-1^n&lt;/code&gt; when &lt;code class=&quot;highlighter-rouge&quot;&gt;n &amp;gt;= 0&lt;/code&gt;. The function &lt;code class=&quot;highlighter-rouge&quot;&gt;f(n)= -1^n&lt;/code&gt; will oscillate
+infinitely between &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;-1&lt;/code&gt;, which can be used as an indicator for which direction the
+color value is changing. As long as we want to stay out of trouble, &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; should remain
+an integer. So if we modify the function slightly to consider both the 0-255 range, and the
+integer constraint, we get something like &lt;code class=&quot;highlighter-rouge&quot;&gt;f(n) = -1^(Math.floor(n/255))&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;As you can see, this function will remain positive for the first 255 values.
+This models the initial incremental motion of the color values.
+Once the input is greater than 255, the value shifts to -1,
+indicating the change in direction as the colors begin to descend from 255 back to 0.&lt;/p&gt;
+
+&lt;p&gt;With this in mind, we can add a helper function that takes in any value (0-infinity),
+and returns a value between 0 and 255 taking oscillation into consideration by first
+determining whether the direction is positive or negative using the &lt;code class=&quot;highlighter-rouge&quot;&gt;-1^n&lt;/code&gt; method, then either returning
+that value mod 255, or returning the difference between the 255 and the former.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function colorValue(n){
+    var dir = Math.pow(-1, Math.floor(n/256));
+    if(dir==1){
+        return n%256;
+    }
+    return 255-(n%256);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we can substitute the arguments in the &lt;code class=&quot;highlighter-rouge&quot;&gt;toCSS&lt;/code&gt; function call with values returned by
+this function.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function colorValue(n){
+    var dir = Math.pow(-1, Math.floor(n/256));
+    if(dir==1){
+        return n%256;
+    }
+    return 255-(n%256);
+}
+
+var delay = 50;    // pause 50 milliseconds before changing the background.
+function transition(r, g, b){
+    var color = toCSS(colorValue(r), colorValue(g), colorValue(b));
+    $(&#39;body&#39;).css(&#39;background-color&#39;, color);
+
+    setTimeout(function(){
+        transition(r+1, g+1, b+1);
+    }, delay);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;step-4-make-it-go&quot;&gt;Step 4: Make it go.&lt;/h1&gt;
+
+&lt;p&gt;Now we just add a call to the transition function from within our &lt;code class=&quot;highlighter-rouge&quot;&gt;$(document).ready();&lt;/code&gt;
+function, and pass in the &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;g&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; values that were defined previously.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var r = rcv();
+var g = rcv();
+var b = rcv();
+$(&#39;body&#39;).css(&#39;background-color&#39;, toCSS(r,g,b));
+transition(r,g,b);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Voila. You should see it run.&lt;/p&gt;
+
+&lt;h2 id=&quot;heres-the-full-script&quot;&gt;Here’s the full script.&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Take RGB values and return a CSS formatted string representation.
+function toCSS(r,g,b){
+    return &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;
+}
+
+// Return a pseudorandom number between 0 and 255
+function rcv(){
+    return Math.floor(Math.random()*256);
+}
+
+function colorValue(n){
+    var dir = Math.pow(-1, Math.floor(n/256));
+    if(dir==1){
+        return n%256;
+    }
+    return 255-(n%256);
+}
+
+var delay = 50;    // pause 50 milliseconds before changing the background.
+function transition(r, g, b){
+    var color = toCSS(colorValue(r), colorValue(g), colorValue(b));
+    $(&#39;body&#39;).css(&#39;background-color&#39;, color);
+
+    setTimeout(function(){
+        transition(r+1, g+1, b+1);
+    }, delay);
+}
+
+$(document).ready(function(){
+    var r = rcv();  // variable for red
+    var g = rcv();  // variable for green
+    var b = rcv();  // variable for blue
+    $(&#39;body&#39;).css(&#39;background-color&#39;, toCSS(r,g,b));
+    transition(r,g,b);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Not too bad huh? All you gotta to do make it work is
+add a script tag to the page you want it on, and point that at
+this script.&lt;/p&gt;
+
+&lt;p&gt;Here’s the &lt;a href=&quot;https://jsfiddle.net/53upk1c6/&quot;&gt;full fiddle&lt;/a&gt; if you’d like to see.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 12 May 2016 00:00:00 -0700</pubDate>
+        <link>http://konstantinfarrell.github.io/2016/05/gradiate</link>
+        <guid isPermaLink="true">http://konstantinfarrell.github.io/2016/05/gradiate</guid>
+        
+        
+        <category>Tutorial</category>
+        
+        <category>JavaScript</category>
+        
+        <category>UI</category>
+        
+        <category>jQuery</category>
+        
+      </item>
+    
+      <item>
+        <title>Konstantin&#39;s Private Minecraft Server</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/files/server/img/screenshot.png&quot; alt=&quot;Minecraft Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;lets-play-some-minecraft&quot;&gt;Lets Play Some Minecraft&lt;/h1&gt;
+
+&lt;p&gt;This page has moved! Everything is now hosted on the server itself!
+Go &lt;a href=&quot;http://tardigrade.ddns.net&quot;&gt;check it out!&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 13 Oct 2015 00:00:00 -0700</pubDate>
+        <link>http://konstantinfarrell.github.io/2015/10/minecraft-server</link>
+        <guid isPermaLink="true">http://konstantinfarrell.github.io/2015/10/minecraft-server</guid>
+        
+        
+        <category>Minecraft</category>
+        
+      </item>
+    
+      <item>
+        <title>Lets Learn Some Python</title>
+        <description>&lt;h2 id=&quot;before-you-begin&quot;&gt;Before you begin&lt;/h2&gt;
+
+&lt;p&gt;You gotta know a few things about whats going on on this page. First, this guide is a quickstart so don’t expect a detailed explanation of anything less than criticaly important.
+Second, I write Python for web applications. So what I consider “the basics” may not be what you’re looking for (though if you’re a total beginner, you may get some use out of it).
+Third, notice the date. ‘murka. Aight, lets hop on our eagles and write some patriotic Python.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;You should have some sort of Python environment installed. You can use the terminal and a text editor like Vim to write and execute Python code, or you could use an IDE like Idle, or PyCharm.
+I will focus primarily on running Python in a Linux based Terminal environment. If you’re using Idle or some other IDE, you can skip to the next section.&lt;/p&gt;
+
+&lt;p&gt;Also I use Vim. Sorry Emacs users.&lt;/p&gt;
+
+&lt;h3 id=&quot;download--install---linux&quot;&gt;Download &amp;amp; Install - Linux&lt;/h3&gt;
+
+&lt;p&gt;Lets start by downloading, and installing the version of Python we are going to be using.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://www.python.org/ftp/python/3.3.6/Python-3.3.6.tar.xz
+tar xf Python-3.*
+cd Python-3.*
+./configure
+make
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you’re running a version of Red Hat, or use yum, use&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;make altinstall
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;otherwise&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;make install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once that is all finished, you should have python ready to go.&lt;/p&gt;
+
+&lt;h3 id=&quot;download--install---windows--mac&quot;&gt;Download &amp;amp; Install - Windows &amp;amp; Mac&lt;/h3&gt;
+
+&lt;p&gt;If you arent running a linux distribution, or just don’t want to hastle with the command line then you can install Idle for free from Python’s website.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.python.org/downloads/&quot;&gt;www.python.org/downloads&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Download and install Python 3.4.3, and open Idle once it’s finished.&lt;/p&gt;
+
+&lt;h3 id=&quot;open-a-new-python-file&quot;&gt;Open a new Python file&lt;/h3&gt;
+
+&lt;p&gt;For terminal users, cd to your working directory &amp;amp; open a new Python using&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim new_file.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;or if you’re using Idle,&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ctrl&amp;gt; + n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;run-that-code&quot;&gt;Run that code&lt;/h3&gt;
+
+&lt;p&gt;If you’re using the terminal, close your text editor and&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python new_file.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;or in Idle, simply press &lt;code class=&quot;highlighter-rouge&quot;&gt;F5&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;some-handy-stuff-to-know&quot;&gt;Some Handy Stuff to Know&lt;/h2&gt;
+
+&lt;h3 id=&quot;comments&quot;&gt;Comments&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# either with a &quot;#&quot;
+&quot;&quot;&quot;
+    or as a block
+    comment spanning
+    multiple lines.
+    You can use both
+    single and double
+    quotes for block
+    comments
+&quot;&quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;input--output&quot;&gt;Input / Output&lt;/h3&gt;
+
+&lt;p&gt;You can output to the terminal with &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print(&quot;Hello, world!&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Variable data types are implicit, so no type declaration is needed&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;my_variable = &quot;Set it to a string&quot;
+another = 5
+yet_another = False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you want to get user input, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;input()&lt;/code&gt; function and assign it to a variable.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user_input = input(&quot;Say something!&quot;)
+print(str(user_input))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Make sure to always sanitize your input and output to avoid errors.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;output = my_variable + str(another)
+print(output) # =&amp;gt; &quot;Set it to a string5&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;str()&lt;/code&gt; is a Python builtin that will output a string representation of the argument. It can be overridden in a class method.&lt;/p&gt;
+
+&lt;h3 id=&quot;string-operations&quot;&gt;String Operations&lt;/h3&gt;
+
+&lt;p&gt;There are also several handy string operations like&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;len(output)                 # =&amp;gt; 19 - the length of the string
+type(string)                # =&amp;gt; string
+words = output.split(&quot; &quot;)   # =&amp;gt; &quot;Set&quot;, &quot;it&quot;, &quot;to&quot;, &quot;a&quot;, &quot;string5&quot;
+output[0]                   # =&amp;gt; &quot;S&quot;
+words[0]                    # =&amp;gt; &quot;Set&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;list-operations&quot;&gt;List Operations&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;words.append(&quot;called&quot;)      # =&amp;gt; &quot;Set&quot;, &quot;it&quot;, &quot;to&quot;, &quot;a&quot;, &quot;string5&quot;, &quot;called&quot;
+words.pop()                 # =&amp;gt; &quot;Set&quot;, &quot;it&quot;, &quot;to&quot;, &quot;a&quot;, &quot;string5&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;control-flow&quot;&gt;Control Flow&lt;/h3&gt;
+
+&lt;p&gt;Python comes equipped with all the bells and whistles you need to make your program run. Thanks to Python’s focus on readability, control flow statements read exactly how they work.&lt;/p&gt;
+
+&lt;p&gt;if / else statements&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = 3
+b = 5
+if a &amp;lt; b:
+    print(str(a) + &quot; is less than &quot; + str(b))
+elif a &amp;gt; b:
+    print(str(b) + &quot; is less than &quot; + str(a))
+else:
+    print(&quot;They are equal&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;for loops&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;list = [1, 2, 3, 4, 5]
+for entry in list:      # note that the iterator variable
+    print(str(entry))   # declaration statement is implicit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and while loops&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;count = 0
+full = 20
+while count &amp;lt;= full:
+    print(str(count))
+    count++
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;functions&quot;&gt;Functions&lt;/h3&gt;
+
+&lt;p&gt;function declaration in Python is done in the following way&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def new_function(some_variable):
+    &quot;&quot;&quot; This function is gonna do some stuff &quot;&quot;&quot;
+    result = some_variable.another_function()
+    return result
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;since Python is interpreted, you need to declare functions before using them.&lt;/p&gt;
+
+&lt;p&gt;Function calls are done as expected.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;some_variable = &quot;stuff&quot;
+result = new_function(some_variable)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;classes&quot;&gt;Classes&lt;/h4&gt;
+
+&lt;p&gt;class declarations are done like&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class AwesomeNewClass(SomeParentClass):
+    &quot;&quot;&quot;
+        The purpose of this class is to extend the
+        functionality of SomeParentClass by being more
+        awesome.
+    &quot;&quot;&quot;
+    def __init__():
+        &quot;&quot;&quot; this is the constructor &quot;&quot;&quot;
+
+    def some_awesome_function():
+        &quot;&quot;&quot; does all the awesome stuff &quot;&quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NOTE:&lt;/code&gt; You should fill in the functions with at least 1 line of code otherwise it will result in a syntax error&lt;/p&gt;
+
+&lt;p&gt;That should be enough to get you started. If you feel like I’ve missed something, please email me and I’ll make changes as necessary. Again, this is a rough guide, and is not meant for people who have never programmed before. There are better, more comprehensive guides out there that would be a far better intro to programming for you.
+Thanks for reading! More Python coming up soon!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 04 Jul 2015 00:00:00 -0700</pubDate>
+        <link>http://konstantinfarrell.github.io/2015/07/python</link>
+        <guid isPermaLink="true">http://konstantinfarrell.github.io/2015/07/python</guid>
+        
+        
+        <category>Quickstart</category>
+        
+      </item>
+    
+      <item>
+        <title>Getting Started with Ruby on CentOS 6.5</title>
+        <description>&lt;h2 id=&quot;before-you-begin&quot;&gt;Before you begin&lt;/h2&gt;
+
+&lt;p&gt;Hi guys. This is a quickstart guide to getting Ruby up and running on your CentOS 6.5 box. This guide is rough, and meant more as a reference for people who know/have worked with the language, but just need a quick refresher. It also works as a quickstart guide for ADHD kids like myself who don’t want to do a lot of reading. Just keep in mind that there’s gonna be a few things missing.&lt;/p&gt;
+
+&lt;p&gt;This guide assumes you have some level of proficiency in UNIX commands, and can infer what is happening in the code without many descriptive details. That beign said, if you think I missed something critical, feel free to email me and I will make adjustments as necessary.&lt;/p&gt;
+
+&lt;h2 id=&quot;lets-begin-now&quot;&gt;Lets begin now.&lt;/h2&gt;
+
+&lt;p&gt;To install ruby on a CentOS 6.5 box, just type this into the terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yum install ruby
+yum install rubygems
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Update everything&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install rubygems-update
+update_rubygems
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Switch to a new directory and open a ruby file&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/new_directory
+vim test.rb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Put this guy at the top of your file&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/env ruby&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now you’re set. Run your project with&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby test.rb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;handy-things-to-know&quot;&gt;Handy things to know&lt;/h2&gt;
+
+&lt;h4 id=&quot;comments&quot;&gt;Comments.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# comments are made with #&#39;s
+=begin
+you can also do block level comments like this
+=end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;arithmetic-logical-and-comparison-operators&quot;&gt;Arithmetic, Logical and Comparison operators.&lt;/h4&gt;
+
+&lt;p&gt;math is basically the same as python&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 + 1  # =&amp;gt; 2 
+1 - 1  # =&amp;gt; 0
+2 * 2  # =&amp;gt; 4
+2 ** 3 # =&amp;gt; 8
+8 / 2  # =&amp;gt; 4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;same goes for equality and inequality&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 == 1 # =&amp;gt; true
+2 != 5 # =&amp;gt; true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and comparisons&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 &amp;lt; 3 # =&amp;gt; true
+1 &amp;gt; 0 # =&amp;gt; true
+1 &amp;lt;= 3 # =&amp;gt; true
+1 &amp;gt;= 0 # =&amp;gt; true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;logical operators have high precedence&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;true &amp;amp;&amp;amp; false # =&amp;gt; false
+true || false # =&amp;gt; true
+!false # =&amp;gt; true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and low precedence variations. These are meant more for control of program flow.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;true and true # =&amp;gt; true
+false or true # =&amp;gt; true
+
+nil # ruby&#39;s keyword for a null value.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;input--output&quot;&gt;Input &amp;amp; Output&lt;/h4&gt;
+
+&lt;p&gt;I/O is quite simple in Ruby. To output values to the console&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;puts &quot;Hello, World!&quot;
+print &quot;You can also print with print&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And to get input&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name = gets # user inputs &quot;Bob&quot;
+puts name   #=&amp;gt; Bob
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;more-coming-soon&quot;&gt;More coming soon&lt;/h2&gt;
+</description>
+        <pubDate>Fri, 03 Jul 2015 00:00:00 -0700</pubDate>
+        <link>http://konstantinfarrell.github.io/2015/07/post-getting-started-with-ruby-on-centos6.5</link>
+        <guid isPermaLink="true">http://konstantinfarrell.github.io/2015/07/post-getting-started-with-ruby-on-centos6.5</guid>
+        
+        
+        <category>Quickstart</category>
+        
+      </item>
+    
+  </channel>
+</rss>
