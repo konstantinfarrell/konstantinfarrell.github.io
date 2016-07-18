@@ -21,12 +21,6 @@ I've done work in a variety of languages, including:
 - HTML/CSS/SASS
 - SQL/MySQL/PostgreSQL
 
-I currently work at Portland State University's department for Academic and Research Computing. (Until June 30th)
-We develop, host, and maintain custom, data-driven research web applications for the university and other clients.
-Currently, we maintain and provide support for over 100 applications spanning many widely-used frameworks.
-
-During my time here I've built applications using Python and the Django Framework, and PHP/LAMP stack.
-
 My hobbies include writing code, creating music or art, tinkering with electronics and
 building and inventing.
 I love to put my creative skills to use and I'm always up for finding more opportunities to do so.
