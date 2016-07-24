@@ -9,7 +9,7 @@ description: >
     He also occasionally has a decent game of DotA.
 baseurl: ""
 url: "http://konstantinfarrell.github.io"
-twitter_username: that_konstantin
+#twitter_username: that_konstantin
 github_username:  konstantinfarrell
 permalink: /:year/:month/:title
 
