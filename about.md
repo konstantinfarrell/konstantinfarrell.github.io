@@ -21,8 +21,9 @@ I've done work in a variety of languages, including:
 - HTML/CSS/SASS
 - SQL/MySQL/PostgreSQL
 
+I currently work at an awesome cybersecurity company, where I make good code and lame jokes.
+
 My hobbies include writing code, creating music or art, tinkering with electronics and
 building and inventing.
-I love to put my creative skills to use and I'm always up for finding more opportunities to do so.
 
 <img id="logo" class="center-horizontal" src="{{ site.url }}/static/img/logo.png" alt="KF Logo" width="300" height="300" />
