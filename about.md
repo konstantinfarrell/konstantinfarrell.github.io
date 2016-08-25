@@ -11,7 +11,7 @@ permalink: /about/
 I'm a Python programmer with a lot of web experience. I've done front end work in javascript and html/css
 as well as back end work using frameworks like Django, Flask and Tornado as well as good ol' php and mysql.
 
-Currently I work with an amazing team at [Cylance](https://www.cylcance.com) writing some sweet code while
+Currently I work with an amazing team at [Cylance](http://cylance.com) writing some sweet code while
 making lame jokes.
 
 My hobbies include writing code, creating music or art, tinkering with electronics,
