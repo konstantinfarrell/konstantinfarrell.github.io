@@ -8,22 +8,13 @@ permalink: /about/
 
 ## My name is Konstantin. I make things go.
 
-I'm a Python programmer, web developer, and a student at Portland State University, majoring in Computer Science with a minor in Mathematics.
-I've done work in a variety of languages, including:
+I'm a Python programmer with a lot of web experience. I've done front end work in javascript and html/css
+as well as back end work using frameworks like Django, Flask and Tornado as well as good ol' php and mysql.
 
-- Python
-- C/C++
-- JavaScript
-- PHP
-- C#/.NET
-- Java
-- Bash
-- HTML/CSS/SASS
-- SQL/MySQL/PostgreSQL
+Currently I work with an amazing team at [Cylance](https://www.cylcance.com) writing some sweet code while
+making lame jokes.
 
-I currently work at an awesome cybersecurity company, where I make good code and lame jokes.
-
-My hobbies include writing code, creating music or art, tinkering with electronics and
+My hobbies include writing code, creating music or art, tinkering with electronics,
 building and inventing.
 
 <img id="logo" class="center-horizontal" src="{{ site.url }}/static/img/logo.png" alt="KF Logo" width="300" height="300" />
