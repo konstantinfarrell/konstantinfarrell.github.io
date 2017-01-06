@@ -63,7 +63,14 @@ function gribset(x,y){
 
     // Now add the color, place the tile,
     // and pretty it up with some css.
-    var color = "#4fcb4f";//"#2E4D5D";//toCSS(rcv(), rcv(), rcv());
+    var color_chance = Math.floor(Math.random() * 10);
+    if(color_chance == 3){
+        var color = "#4fcb4f";//"#2E4D5D";//toCSS(rcv(), rcv(), rcv());
+    } else if(color_chance % 3 == 0) {
+        var color = "#333";
+    } else {
+        var color = "#222";
+    }
     $("#"+name).css({
         'position': 'absolute',
         'background-color': color,
