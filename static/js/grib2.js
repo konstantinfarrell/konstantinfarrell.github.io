@@ -1,6 +1,6 @@
 // Now define the variables for each cell.
 // Note that memory only applies to cells that have been clicked.
-var size = 30;
+var size = 20;
 var memory = 3000;
 
 // Take RGB values and return a CSS formatted string representation.
@@ -63,11 +63,11 @@ function gribset(x,y){
 
     // Now add the color, place the tile,
     // and pretty it up with some css.
-    var color = "#2E4D5D";//toCSS(rcv(), rcv(), rcv());
+    var color = "#4fcb4f";//"#2E4D5D";//toCSS(rcv(), rcv(), rcv());
     $("#"+name).css({
         'position': 'absolute',
         'background-color': color,
-        'box-shadow': '0 0 1px '+color,
+        //'box-shadow': '0 0 2px #22832c',
         'border-radius': '2px',
         'top': index_Y * size,
         'left': index_X * size,
@@ -96,7 +96,7 @@ function shunt(name){
 // A demo function that places a tile at a random
 // location at a random time interval.
 function demo_gribble(){
-    size = 30;
+    size = size;
     var x = Math.floor(Math.random()* $(document).width());
     var y = Math.floor(Math.random()* $(document).height());
     var time = Math.floor(Math.random() * 450 + 50);
