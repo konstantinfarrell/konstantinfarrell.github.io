@@ -14,13 +14,13 @@
         var window_size = Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2));
         var max_connection_distance = window_size / 3.75 ;
         var dot_colors = ['#008080', '#ADD8E6', '#61B2CB', '#2EA2D1'];
-        var max_dots = 30;
-        var min_dots = 10;
+        var max_dots = 40;
+        var min_dots = 15;
         var max_size = 15;
         var min_size = 4;
-        var max_velocity = 0.5;
+        var max_velocity = Math.random()*5;
         var max_delta_direction = 3; // degrees
-        var threshold = 0 * max_connection_distance; // Start getting transparent if we're > 50% max distance
+        var threshold = 0 * max_connection_distance;
         var inverse_threshold = max_connection_distance - threshold;
 
         function setup(){
@@ -122,14 +122,14 @@
                 var rads = (this.direction*Math.PI)/180;
                 // Move in current direction
                 var new_x = Math.cos(rads) * this.velocity + this.pos.x;
-                if(new_x > window.innerWidth || new_x < 0){
+                if(new_x >= window.innerWidth || new_x <= 0){
                     new_x = this.pos.x;
-                    this.direction = Math.random() * 2 * Math.PI;
+                    this.direction = Math.random() * 360;
                 }
                 var new_y = Math.sin(rads) * this.velocity + this.pos.y;
-                if(new_y > window.innerHeight || new_y < 0){
+                if(new_y >= window.innerHeight || new_y <= 0){
                     new_y = this.pos.y;
-                    this.direction = Math.random() * 2 * Math.PI;
+                    this.direction = Math.random() * 360;
                 }
                 this.pos = createVector(new_x, new_y);
             };
@@ -143,7 +143,7 @@
         }
 
         // I was just really lazy and didn't wanna implement this
-	// https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+		// https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
         function hexToRgb(hex) {
             var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
             return result ? {
