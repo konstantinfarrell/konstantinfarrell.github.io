@@ -24,9 +24,9 @@
     <script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://konstantinfarrell.github.io/2016/05/fsck">
+    <link rel="canonical" href="http://0.0.0.0:4000/2016/05/fsck">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link type="application/atom+xml" rel="alternate" href="http://konstantinfarrell.github.io/feed.xml" title="Konstantin's Box" />
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Konstantin's Box" />
 </head>
 
 
@@ -67,8 +67,6 @@
             
               <a class="page-link" href="/projects/">Projects</a>
             
-          
-        
           
         
           
@@ -126,17 +124,16 @@ in roughly the same state as before the issue.</p>
 
 <p>Oh just how wrong I was.</p>
 
-<p>After booting into my old CentOS config, I went to <code class="highlighter-rouge">/etc/sysconfig/kernel</code> and set the param to <code class="highlighter-rouge">default</code>.
+<p>After booting into my old CentOS config, I went to <code class="language-plaintext highlighter-rouge">/etc/sysconfig/kernel</code> and set the param to <code class="language-plaintext highlighter-rouge">default</code>.
 Then I punched in</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yum erase kernel-xen
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum erase kernel-xen
+</code></pre></div></div>
 
 <p>And that’s where everything went wrong.</p>
 
 <p>When I went to reboot the VM, I was met with the command line of the grub bootloader.
-And after a few minutes of poking around, I discovered that the contents of <code class="highlighter-rouge">/boot/grub/grub.conf</code>
+And after a few minutes of poking around, I discovered that the contents of <code class="language-plaintext highlighter-rouge">/boot/grub/grub.conf</code>
 had been erased entirely. Leaving nothing but an empty file in its place.</p>
 
 <h2 id="how-to-fix-it">How To Fix It</h2>
@@ -144,7 +141,7 @@ had been erased entirely. Leaving nothing but an empty file in its place.</p>
 <p>After hiding under my desk in the fetal position failed to produce any desirable results, I thought
 to myself <strong>“maybe the problem would be fixable if I actually tried to fix it.”</strong></p>
 
-<p>My first attempt involved trying to boot the VM from a live USB, and simply copying the <code class="highlighter-rouge">grub.conf</code>
+<p>My first attempt involved trying to boot the VM from a live USB, and simply copying the <code class="language-plaintext highlighter-rouge">grub.conf</code>
 file over. However this ultimately proved unsuccessful as the operating systems had different configurations.
 (One was vanilla CentOS, the other was a Vagrant-provisioned CentOS install.)</p>
 
@@ -201,7 +198,7 @@ it and actually backup my VM before trying to do something like that.</p>
 
           
           <li>
-            <a href="https://twitter.com/that_konstantin">
+            <a href="https://twitter.com/async_def">
               <span class="icon  icon--twitter">
                 <svg viewBox="0 0 16 16">
                   <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -209,7 +206,7 @@ it and actually backup my VM before trying to do something like that.</p>
                 </svg>
               </span>
 
-              <span class="username">that_konstantin</span>
+              <span class="username">async_def</span>
             </a>
           </li>
           

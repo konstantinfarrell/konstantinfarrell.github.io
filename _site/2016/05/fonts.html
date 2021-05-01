@@ -24,9 +24,9 @@
     <script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://konstantinfarrell.github.io/2016/05/fonts">
+    <link rel="canonical" href="http://0.0.0.0:4000/2016/05/fonts">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link type="application/atom+xml" rel="alternate" href="http://konstantinfarrell.github.io/feed.xml" title="Konstantin's Box" />
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Konstantin's Box" />
 </head>
 
 
@@ -70,8 +70,6 @@
           
         
           
-        
-          
             
               <a class="page-link" href="/posts/">Blog</a>
             
@@ -103,27 +101,25 @@
 <p>It took a little bit of digging to find this one, so I’m posting it for future reference.</p>
 
 <p>If you happen to be running CentOS 7 in headless mode on an AMD processor (can you say niche?)
-and have wanted to change the system font family or size, look no further than <code class="highlighter-rouge">terminus-fonts-console</code>.
+and have wanted to change the system font family or size, look no further than <code class="language-plaintext highlighter-rouge">terminus-fonts-console</code>.
 It’s a pretty neat little utility that does it all for you.</p>
 
-<p>First install it with <code class="highlighter-rouge">yum</code>, then set the system font to whatever you like. The supported font types
+<p>First install it with <code class="language-plaintext highlighter-rouge">yum</code>, then set the system font to whatever you like. The supported font types
 are listed on their package <a href="https://pkgs.org/centos-6/centos-i386/terminus-fonts-console-4.30-1.el6.noarch.rpm.html">site</a>.</p>
 
-<p>In my case, I wanted a bigger font, so I used <code class="highlighter-rouge">ter-d22b</code></p>
+<p>In my case, I wanted a bigger font, so I used <code class="language-plaintext highlighter-rouge">ter-d22b</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yum install terminus-fonts-console
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install terminus-fonts-console
 setfont ter-d22b.psf.gz
 echo setfont ter-d22b.psf.gz &gt;&gt; /etc/rc.local
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This may not apply to you, but in my case it did as I was using a fresh install of CentOS.</p>
 
 <p>Make sure you set the executable bit.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>chmod +x /etc/rc.d/rc.local
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x /etc/rc.d/rc.local
+</code></pre></div></div>
 
 <p>And just like that your new system font is ready to go.</p>
 
@@ -165,7 +161,7 @@ echo setfont ter-d22b.psf.gz &gt;&gt; /etc/rc.local
 
           
           <li>
-            <a href="https://twitter.com/that_konstantin">
+            <a href="https://twitter.com/async_def">
               <span class="icon  icon--twitter">
                 <svg viewBox="0 0 16 16">
                   <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -173,7 +169,7 @@ echo setfont ter-d22b.psf.gz &gt;&gt; /etc/rc.local
                 </svg>
               </span>
 
-              <span class="username">that_konstantin</span>
+              <span class="username">async_def</span>
             </a>
           </li>
           

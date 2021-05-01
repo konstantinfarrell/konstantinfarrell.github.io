@@ -24,9 +24,9 @@
     <script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://konstantinfarrell.github.io/2015/07/python">
+    <link rel="canonical" href="http://0.0.0.0:4000/2015/07/python">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link type="application/atom+xml" rel="alternate" href="http://konstantinfarrell.github.io/feed.xml" title="Konstantin's Box" />
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Konstantin's Box" />
 </head>
 
 
@@ -67,8 +67,6 @@
             
               <a class="page-link" href="/projects/">Projects</a>
             
-          
-        
           
         
           
@@ -115,25 +113,22 @@ I will focus primarily on running Python in a Linux based Terminal environment. 
 
 <p>Lets start by downloading, and installing the version of Python we are going to be using.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>wget https://www.python.org/ftp/python/3.3.6/Python-3.3.6.tar.xz
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://www.python.org/ftp/python/3.3.6/Python-3.3.6.tar.xz
 tar xf Python-3.*
 cd Python-3.*
 ./configure
 make
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If you’re running a version of Red Hat, or use yum, use</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>make altinstall
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make altinstall
+</code></pre></div></div>
 
 <p>otherwise</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>make install
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make install
+</code></pre></div></div>
 
 <p>Once that is all finished, you should have python ready to go.</p>
 
@@ -149,31 +144,28 @@ make
 
 <p>For terminal users, cd to your working directory &amp; open a new Python using</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>vim new_file.py
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim new_file.py
+</code></pre></div></div>
 
 <p>or if you’re using Idle,</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ctrl&gt; + n
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ctrl&gt; + n
+</code></pre></div></div>
 
 <h3 id="run-that-code">Run that code</h3>
 
 <p>If you’re using the terminal, close your text editor and</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>python new_file.py
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python new_file.py
+</code></pre></div></div>
 
-<p>or in Idle, simply press <code class="highlighter-rouge">F5</code></p>
+<p>or in Idle, simply press <code class="language-plaintext highlighter-rouge">F5</code></p>
 
 <h2 id="some-handy-stuff-to-know">Some Handy Stuff to Know</h2>
 
 <h3 id="comments">Comments</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># either with a "#"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># either with a "#"
 """
     or as a block
     comment spanning
@@ -183,59 +175,52 @@ make
     quotes for block
     comments
 """
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="input--output">Input / Output</h3>
 
-<p>You can output to the terminal with <code class="highlighter-rouge">print()</code></p>
+<p>You can output to the terminal with <code class="language-plaintext highlighter-rouge">print()</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>print("Hello, world!")
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Hello, world!")
+</code></pre></div></div>
 
 <p>Variable data types are implicit, so no type declaration is needed</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>my_variable = "Set it to a string"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my_variable = "Set it to a string"
 another = 5
 yet_another = False
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>If you want to get user input, use the <code class="highlighter-rouge">input()</code> function and assign it to a variable.</p>
+<p>If you want to get user input, use the <code class="language-plaintext highlighter-rouge">input()</code> function and assign it to a variable.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>user_input = input("Say something!")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user_input = input("Say something!")
 print(str(user_input))
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Make sure to always sanitize your input and output to avoid errors.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>output = my_variable + str(another)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>output = my_variable + str(another)
 print(output) # =&gt; "Set it to a string5"
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p><code class="highlighter-rouge">str()</code> is a Python builtin that will output a string representation of the argument. It can be overridden in a class method.</p>
+<p><code class="language-plaintext highlighter-rouge">str()</code> is a Python builtin that will output a string representation of the argument. It can be overridden in a class method.</p>
 
 <h3 id="string-operations">String Operations</h3>
 
 <p>There are also several handy string operations like</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>len(output)                 # =&gt; 19 - the length of the string
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>len(output)                 # =&gt; 19 - the length of the string
 type(string)                # =&gt; string
 words = output.split(" ")   # =&gt; "Set", "it", "to", "a", "string5"
 output[0]                   # =&gt; "S"
 words[0]                    # =&gt; "Set"
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="list-operations">List Operations</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>words.append("called")      # =&gt; "Set", "it", "to", "a", "string5", "called"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>words.append("called")      # =&gt; "Set", "it", "to", "a", "string5", "called"
 words.pop()                 # =&gt; "Set", "it", "to", "a", "string5"
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="control-flow">Control Flow</h3>
 
@@ -243,7 +228,7 @@ words.pop()                 # =&gt; "Set", "it", "to", "a", "string5"
 
 <p>if / else statements</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>a = 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 3
 b = 5
 if a &lt; b:
     print(str(a) + " is less than " + str(b))
@@ -251,52 +236,47 @@ elif a &gt; b:
     print(str(b) + " is less than " + str(a))
 else:
     print("They are equal")
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>for loops</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>list = [1, 2, 3, 4, 5]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list = [1, 2, 3, 4, 5]
 for entry in list:      # note that the iterator variable
     print(str(entry))   # declaration statement is implicit
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>and while loops</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>count = 0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>count = 0
 full = 20
 while count &lt;= full:
     print(str(count))
     count++
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="functions">Functions</h3>
 
 <p>function declaration in Python is done in the following way</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>def new_function(some_variable):
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def new_function(some_variable):
     """ This function is gonna do some stuff """
     result = some_variable.another_function()
     return result
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>since Python is interpreted, you need to declare functions before using them.</p>
 
 <p>Function calls are done as expected.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>some_variable = "stuff"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>some_variable = "stuff"
 result = new_function(some_variable)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="classes">Classes</h4>
 
 <p>class declarations are done like</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class AwesomeNewClass(SomeParentClass):
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class AwesomeNewClass(SomeParentClass):
     """
         The purpose of this class is to extend the
         functionality of SomeParentClass by being more
@@ -307,10 +287,9 @@ result = new_function(some_variable)
 
     def some_awesome_function():
         """ does all the awesome stuff """
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p><code class="highlighter-rouge">NOTE:</code> You should fill in the functions with at least 1 line of code otherwise it will result in a syntax error</p>
+<p><code class="language-plaintext highlighter-rouge">NOTE:</code> You should fill in the functions with at least 1 line of code otherwise it will result in a syntax error</p>
 
 <p>That should be enough to get you started. If you feel like I’ve missed something, please email me and I’ll make changes as necessary. Again, this is a rough guide, and is not meant for people who have never programmed before. There are better, more comprehensive guides out there that would be a far better intro to programming for you.
 Thanks for reading! More Python coming up soon!</p>
@@ -353,7 +332,7 @@ Thanks for reading! More Python coming up soon!</p>
 
           
           <li>
-            <a href="https://twitter.com/that_konstantin">
+            <a href="https://twitter.com/async_def">
               <span class="icon  icon--twitter">
                 <svg viewBox="0 0 16 16">
                   <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -361,7 +340,7 @@ Thanks for reading! More Python coming up soon!</p>
                 </svg>
               </span>
 
-              <span class="username">that_konstantin</span>
+              <span class="username">async_def</span>
             </a>
           </li>
           

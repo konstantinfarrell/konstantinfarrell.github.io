@@ -24,9 +24,9 @@
     <script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://konstantinfarrell.github.io/2015/07/post-getting-started-with-ruby-on-centos6.5">
+    <link rel="canonical" href="http://0.0.0.0:4000/2015/07/post-getting-started-with-ruby-on-centos6.5">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link type="application/atom+xml" rel="alternate" href="http://konstantinfarrell.github.io/feed.xml" title="Konstantin's Box" />
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Konstantin's Box" />
 </head>
 
 
@@ -70,8 +70,6 @@
           
         
           
-        
-          
             
               <a class="page-link" href="/posts/">Blog</a>
             
@@ -108,108 +106,95 @@
 
 <p>To install ruby on a CentOS 6.5 box, just type this into the terminal.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yum install ruby
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install ruby
 yum install rubygems
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Update everything</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gem install rubygems-update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install rubygems-update
 update_rubygems
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Switch to a new directory and open a ruby file</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd ~/new_directory
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/new_directory
 vim test.rb
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Put this guy at the top of your file</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">#!/usr/bin/env ruby</span>
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/usr/bin/env ruby
+</code></pre></div></div>
 
 <p>Now you’re set. Run your project with</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ruby test.rb
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby test.rb
+</code></pre></div></div>
 
 <h2 id="handy-things-to-know">Handy things to know</h2>
 
 <h4 id="comments">Comments.</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># comments are made with #'s
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># comments are made with #'s
 =begin
 you can also do block level comments like this
 =end
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="arithmetic-logical-and-comparison-operators">Arithmetic, Logical and Comparison operators.</h4>
 
 <p>math is basically the same as python</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>1 + 1  # =&gt; 2 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 + 1  # =&gt; 2 
 1 - 1  # =&gt; 0
 2 * 2  # =&gt; 4
 2 ** 3 # =&gt; 8
 8 / 2  # =&gt; 4
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>same goes for equality and inequality</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>1 == 1 # =&gt; true
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 == 1 # =&gt; true
 2 != 5 # =&gt; true
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>and comparisons</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>1 &lt; 3 # =&gt; true
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 &lt; 3 # =&gt; true
 1 &gt; 0 # =&gt; true
 1 &lt;= 3 # =&gt; true
 1 &gt;= 0 # =&gt; true
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>logical operators have high precedence</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>true &amp;&amp; false # =&gt; false
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>true &amp;&amp; false # =&gt; false
 true || false # =&gt; true
 !false # =&gt; true
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>and low precedence variations. These are meant more for control of program flow.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>true and true # =&gt; true
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>true and true # =&gt; true
 false or true # =&gt; true
 
 nil # ruby's keyword for a null value.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="input--output">Input &amp; Output</h4>
 
 <p>I/O is quite simple in Ruby. To output values to the console</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>puts "Hello, World!"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>puts "Hello, World!"
 print "You can also print with print"
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And to get input</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>name = gets # user inputs "Bob"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name = gets # user inputs "Bob"
 puts name   #=&gt; Bob
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="more-coming-soon">More coming soon</h2>
 
@@ -251,7 +236,7 @@ puts name   #=&gt; Bob
 
           
           <li>
-            <a href="https://twitter.com/that_konstantin">
+            <a href="https://twitter.com/async_def">
               <span class="icon  icon--twitter">
                 <svg viewBox="0 0 16 16">
                   <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -259,7 +244,7 @@ puts name   #=&gt; Bob
                 </svg>
               </span>
 
-              <span class="username">that_konstantin</span>
+              <span class="username">async_def</span>
             </a>
           </li>
           

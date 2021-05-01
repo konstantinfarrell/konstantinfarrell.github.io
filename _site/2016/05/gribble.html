@@ -24,9 +24,9 @@
     <script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://konstantinfarrell.github.io/2016/05/gribble">
+    <link rel="canonical" href="http://0.0.0.0:4000/2016/05/gribble">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link type="application/atom+xml" rel="alternate" href="http://konstantinfarrell.github.io/feed.xml" title="Konstantin's Box" />
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Konstantin's Box" />
 </head>
 
 
@@ -70,8 +70,6 @@
           
         
           
-        
-          
             
               <a class="page-link" href="/posts/">Blog</a>
             
@@ -110,11 +108,11 @@
 
 <h2 id="step-1-setup-the-environment">Step 1: Setup the Environment</h2>
 
-<p>Lets start this off in a new <code class="highlighter-rouge">.js</code> file, with a standard <code class="highlighter-rouge">$(document).ready();</code> call.</p>
+<p>Lets start this off in a new <code class="language-plaintext highlighter-rouge">.js</code> file, with a standard <code class="language-plaintext highlighter-rouge">$(document).ready();</code> call.</p>
 
-<p>In one of my previous posts, I defined two functions: <code class="highlighter-rouge">toCSS()</code> and <code class="highlighter-rouge">rcv()</code>. We’re going to reuse that code.</p>
+<p>In one of my previous posts, I defined two functions: <code class="language-plaintext highlighter-rouge">toCSS()</code> and <code class="language-plaintext highlighter-rouge">rcv()</code>. We’re going to reuse that code.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// Take RGB values and return a CSS formatted string representation.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Take RGB values and return a CSS formatted string representation.
 function toCSS(r,g,b){
     return "rgb("+r+","+g+","+b+")";
 }
@@ -123,18 +121,17 @@ function toCSS(r,g,b){
 function rcv(){
     return Math.floor(Math.random()*256);
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>From inside the <code class="highlighter-rouge">$(document).ready();</code> call, set the background to something with a nice dark color that isn’t too sharp. <code class="highlighter-rouge">#111</code> works fine in this case.
+<p>From inside the <code class="language-plaintext highlighter-rouge">$(document).ready();</code> call, set the background to something with a nice dark color that isn’t too sharp. <code class="language-plaintext highlighter-rouge">#111</code> works fine in this case.
 Make the body the fill the viewport, and make sure all overflow data is hidden.</p>
 
 <p>We’re going to want to make sure to set a size for our tiles, and give them a delay before shunting them out of the screen.
-<code class="highlighter-rouge">30</code> pixels is what I used as the default size. I also defined a delay of 3 seconds.</p>
+<code class="language-plaintext highlighter-rouge">30</code> pixels is what I used as the default size. I also defined a delay of 3 seconds.</p>
 
 <p>Right now your code should look something like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var size = 30;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var size = 30;
 
 // Take RGB values and return a CSS formatted string representation.
 function toCSS(r,g,b){
@@ -156,8 +153,7 @@ $(document).ready(function(e){
         'position': 'absolute'
     });
 }):
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="step-2-place-a-tile">Step 2: Place A Tile</h2>
 
@@ -170,29 +166,27 @@ of the tile. That is, we divide the coordinate by the size, and round down.
 Since this gives us a unique way to identify each tile, it can be used as part of the tile id.
 Before placing the tile, we should check to make sure one with that identifier doesn’t already exist.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var index_X = Math.floor(x/size);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var index_X = Math.floor(x/size);
 var index_Y = Math.floor(y/size);
 var name = index_X + "_" + index_Y + "_tile";
 var exists = document.getElementById(name);
 if(exists == null){
     $("body").append("&lt;div id='"+name+"'&gt;&lt;/div&gt;");
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Great! This works, except that the tile just appears in its space. It would look nicer if there was some sort of transition animation.
-Inside the <code class="highlighter-rouge">if()</code> statement, add the following lines.</p>
+Inside the <code class="language-plaintext highlighter-rouge">if()</code> statement, add the following lines.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$("#"+name).css({'display': 'none'});
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$("#"+name).css({'display': 'none'});
 $("#"+name).fadeIn(250).promise();
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This will add the element, but won’t immediately show it on the page. It will then take 1/4 of a second to fade in.</p>
 
 <p>At this point, a color can be generated, and all we have to do is modify the css to pretty up the tile.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var color = toCSS(rcv(), rcv(), rcv());
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var color = toCSS(rcv(), rcv(), rcv());
 $("#"+name).css({
     'position': 'absolute',
     'background-color': color,
@@ -203,14 +197,13 @@ $("#"+name).css({
     'width': size-3,
     'height': size-3
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now we can return the name as the identifier. Just like that, the tile has been placed.</p>
 
 <h4 id="here-is-the-full-code-for-the-function">Here is the full code for the function.</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function gribset(x,y){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function gribset(x,y){
     var index_X = Math.floor(x/size);
     var index_Y = Math.floor(y/size);
     var name = index_X + "_" + index_Y + "_cell";
@@ -234,8 +227,7 @@ $("#"+name).css({
     });
     return name;
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="step-3-pick-a-direction">Step 3: Pick a Direction</h2>
 
@@ -246,7 +238,7 @@ series of if statements to determine the information that will be returned.</p>
 <p>The function should return the direction of travel (vertical or horizontal aka top or left), and the coordinate point
 the tile will travel to. Something off the edge of the screen to give the illusion the tile has disappeared.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function goDirection(){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function goDirection(){
     var num = Math.floor(Math.random()*4);
     if(num==0){
         return ['top', $(document).height()];
@@ -258,8 +250,7 @@ the tile will travel to. Something off the edge of the screen to give the illusi
         return ['left', -100];
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="step-4-shunt">Step 4: Shunt!</h2>
 
@@ -273,7 +264,7 @@ Lets also randomize the speed at which the tiles move by defining a time interva
 
 <p>Here is the code.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function shunt(name){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function shunt(name){
     var d = goDirection();
     var direction = d[0];
     var magnitude = d[1];
@@ -284,10 +275,9 @@ Lets also randomize the speed at which the tiles move by defining a time interva
         $("#"+name).remove();
     });
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>Notice the last line of the function. It calls the animation, then <code class="highlighter-rouge">.promise()</code> and <code class="highlighter-rouge">.done()</code>.
+<p>Notice the last line of the function. It calls the animation, then <code class="language-plaintext highlighter-rouge">.promise()</code> and <code class="language-plaintext highlighter-rouge">.done()</code>.
 This ensures that the following code will not be executed until the current code has finished
 processing.</p>
 
@@ -297,7 +287,7 @@ processing.</p>
 that puts them all together.</p>
 
 <p>This function should be able to create a tile, place it, shunt it, then remove it.
-It should take the coordinate points as arguments, and feed them to the <code class="highlighter-rouge">gribset</code> function.</p>
+It should take the coordinate points as arguments, and feed them to the <code class="language-plaintext highlighter-rouge">gribset</code> function.</p>
 
 <p>This will place a tile on the page, set its color, and animate its appearance.
 Then after a brief pause, the function should either make the tile fade out, or shunt if off the page.</p>
@@ -306,7 +296,7 @@ Then after a brief pause, the function should either make the tile fade out, or 
 
 <p>Here’s how my function looks.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function gribble(x,y){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function gribble(x,y){
     var name = gribset(x,y);
     var memory = Math.floor(Math.random()*2000+2000)
     setTimeout(function(){
@@ -319,8 +309,7 @@ Then after a brief pause, the function should either make the tile fade out, or 
         }
     }, memory);
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>As you can see, there is a 1/10 chance of the tile disappearing after a time interval between 2 and 4 seconds.
 If it doesn’t disappear, it gets shunted off the screen.</p>
@@ -330,7 +319,7 @@ If it doesn’t disappear, it gets shunted off the screen.</p>
 <p>We’ve done all the heavy lifting at this point. In order to get the effect seen in the frame at the top of the page,
 the function should be called after random time intervals, with random coordinates.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function demo_gribble(){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function demo_gribble(){
     var x = Math.floor(Math.random()* $(document).width());
     var y = Math.floor(Math.random()* $(document).height());
     var time = Math.floor(Math.random() * 450 + 50);
@@ -339,13 +328,12 @@ the function should be called after random time intervals, with random coordinat
         demo_gribble();
     }, time);
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>All that’s left is to add a call to this in the <code class="highlighter-rouge">$(document).ready();</code> function.
+<p>All that’s left is to add a call to this in the <code class="language-plaintext highlighter-rouge">$(document).ready();</code> function.
 Like so.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$(document).ready(function(e){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$(document).ready(function(e){
     $('body').css({
         'width': '100%',
         'height': '100%',
@@ -356,21 +344,19 @@ Like so.</p>
 
     demo_gribble();
 })
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="step-7-click-behavior-optional">Step 7: Click Behavior (Optional)</h2>
 
 <p>This part is optional, but it would be nice if the user was able to click on the page to generate a tile at that location.
-All you have to do is add this to the <code class="highlighter-rouge">$(document).ready()</code> function.</p>
+All you have to do is add this to the <code class="language-plaintext highlighter-rouge">$(document).ready()</code> function.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$(document).click(function(e){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$(document).click(function(e){
     var x = e.clientX;
     var y = e.clientY;
     gribble(x, y);
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And it’s all done. That’s all you need.</p>
 
@@ -378,7 +364,7 @@ All you have to do is add this to the <code class="highlighter-rouge">$(document
 
 <p>Along with a <a href="/gribble/">link</a> to the full-page version</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var size = 30;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var size = 30;
 
 // Take RGB values and return a CSS formatted string representation.
 function toCSS(r,g,b){
@@ -501,8 +487,7 @@ $(document).ready(function(e){
     // Run the demo function
     demo_gribble();
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>A little bigger than last time, but still not bad at all.
 <a href="https://jsfiddle.net/28p6ox9b/4/">Here’s the full fiddle</a> if you want to mess with it.</p>
@@ -545,7 +530,7 @@ $(document).ready(function(e){
 
           
           <li>
-            <a href="https://twitter.com/that_konstantin">
+            <a href="https://twitter.com/async_def">
               <span class="icon  icon--twitter">
                 <svg viewBox="0 0 16 16">
                   <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -553,7 +538,7 @@ $(document).ready(function(e){
                 </svg>
               </span>
 
-              <span class="username">that_konstantin</span>
+              <span class="username">async_def</span>
             </a>
           </li>
           

@@ -24,9 +24,9 @@
     <script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://konstantinfarrell.github.io/2016/05/gradiate">
+    <link rel="canonical" href="http://0.0.0.0:4000/2016/05/gradiate">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link type="application/atom+xml" rel="alternate" href="http://konstantinfarrell.github.io/feed.xml" title="Konstantin's Box" />
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Konstantin's Box" />
 </head>
 
 
@@ -70,8 +70,6 @@
           
         
           
-        
-          
             
               <a class="page-link" href="/posts/">Blog</a>
             
@@ -111,11 +109,10 @@ background in jQuery.</p>
 
 <p>Lets just start out with a call to the ready function</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$(document).ready(function(){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$(document).ready(function(){
     // Here's where everything happens
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If you are following along in jsFiddle, this is already supplied along with some css.</p>
 
@@ -129,7 +126,7 @@ for manipulating css, it would be convenient to do that in this function too.</p
 
 <p>So my code now looks like this.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// Take RGB values and return a CSS formatted string representation.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Take RGB values and return a CSS formatted string representation.
 function toCSS(r,g,b){
     return "rgb("+r+","+g+","+b+")";
 }
@@ -145,16 +142,14 @@ $(document).ready(function(){
     var b = rcv();  // variable for blue
 
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The next step is set the background color, and figure out a way to make it cycle.
-So on the last line of the <code class="highlighter-rouge">$(document).ready();</code> call, right before the closing <code class="highlighter-rouge">});</code>
+So on the last line of the <code class="language-plaintext highlighter-rouge">$(document).ready();</code> call, right before the closing <code class="language-plaintext highlighter-rouge">});</code>
 , add the following line.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$('body').css('background-color', toCSS(r,g,b));
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('body').css('background-color', toCSS(r,g,b));
+</code></pre></div></div>
 
 <p>Now if you refresh the page, you should see the background color change to
 something random each time.</p>
@@ -165,9 +160,9 @@ something random each time.</p>
 really need to do is to add a function that slightly changes each color value, and then call that
 function periodically (lets start with every 50ms) in order to achieve a smooth transition.</p>
 
-<p>To do this we can add this right below the <code class="highlighter-rouge">$('body').css</code> call.</p>
+<p>To do this we can add this right below the <code class="language-plaintext highlighter-rouge">$('body').css</code> call.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var delay = 50;    // pause 50 milliseconds before changing the background.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var delay = 50;    // pause 50 milliseconds before changing the background.
 function transition(r, g, b){
     var color = toCSS(r,g,b);                   // get the background color.
     $('body').css('background-color', color);   // and apply it.
@@ -176,8 +171,7 @@ function transition(r, g, b){
         transition(r+1, b+1, c+1);      // now increment the colors and call
     }, delay);                          // the function with the function with
 }                                       // the new values.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The tricky part comes when we consider the fact that each color
 value can only go from 0-255. So if our function incrementally changes
@@ -193,11 +187,11 @@ there would be a sharp change as that particular color jumped back down to 0.</p
 
 <p>To address this lets just look at some nice mathematical properties.</p>
 
-<p>Namely the properties of <code class="highlighter-rouge">-1^n</code> when <code class="highlighter-rouge">n &gt;= 0</code>. The function <code class="highlighter-rouge">f(n)= -1^n</code> will oscillate
-infinitely between <code class="highlighter-rouge">1</code> and <code class="highlighter-rouge">-1</code>, which can be used as an indicator for which direction the
-color value is changing. As long as we want to stay out of trouble, <code class="highlighter-rouge">n</code> should remain
+<p>Namely the properties of <code class="language-plaintext highlighter-rouge">-1^n</code> when <code class="language-plaintext highlighter-rouge">n &gt;= 0</code>. The function <code class="language-plaintext highlighter-rouge">f(n)= -1^n</code> will oscillate
+infinitely between <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">-1</code>, which can be used as an indicator for which direction the
+color value is changing. As long as we want to stay out of trouble, <code class="language-plaintext highlighter-rouge">n</code> should remain
 an integer. So if we modify the function slightly to consider both the 0-255 range, and the
-integer constraint, we get something like <code class="highlighter-rouge">f(n) = -1^(Math.floor(n/255))</code>.</p>
+integer constraint, we get something like <code class="language-plaintext highlighter-rouge">f(n) = -1^(Math.floor(n/255))</code>.</p>
 
 <p>As you can see, this function will remain positive for the first 255 values.
 This models the initial incremental motion of the color values.
@@ -206,23 +200,22 @@ indicating the change in direction as the colors begin to descend from 255 back 
 
 <p>With this in mind, we can add a helper function that takes in any value (0-infinity),
 and returns a value between 0 and 255 taking oscillation into consideration by first
-determining whether the direction is positive or negative using the <code class="highlighter-rouge">-1^n</code> method, then either returning
+determining whether the direction is positive or negative using the <code class="language-plaintext highlighter-rouge">-1^n</code> method, then either returning
 that value mod 255, or returning the difference between the 255 and the former.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function colorValue(n){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function colorValue(n){
     var dir = Math.pow(-1, Math.floor(n/256));
     if(dir==1){
         return n%256;
     }
     return 255-(n%256);
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>Now we can substitute the arguments in the <code class="highlighter-rouge">toCSS</code> function call with values returned by
+<p>Now we can substitute the arguments in the <code class="language-plaintext highlighter-rouge">toCSS</code> function call with values returned by
 this function.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function colorValue(n){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function colorValue(n){
     var dir = Math.pow(-1, Math.floor(n/256));
     if(dir==1){
         return n%256;
@@ -239,27 +232,25 @@ function transition(r, g, b){
         transition(r+1, g+1, b+1);
     }, delay);
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="step-4-make-it-go">Step 4: Make it go.</h1>
 
-<p>Now we just add a call to the transition function from within our <code class="highlighter-rouge">$(document).ready();</code>
-function, and pass in the <code class="highlighter-rouge">r</code>,<code class="highlighter-rouge">g</code>,<code class="highlighter-rouge">b</code> values that were defined previously.</p>
+<p>Now we just add a call to the transition function from within our <code class="language-plaintext highlighter-rouge">$(document).ready();</code>
+function, and pass in the <code class="language-plaintext highlighter-rouge">r</code>,<code class="language-plaintext highlighter-rouge">g</code>,<code class="language-plaintext highlighter-rouge">b</code> values that were defined previously.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var r = rcv();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var r = rcv();
 var g = rcv();
 var b = rcv();
 $('body').css('background-color', toCSS(r,g,b));
 transition(r,g,b);
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Voila. You should see it run.</p>
 
 <h2 id="heres-the-full-script">Here’s the full script.</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// Take RGB values and return a CSS formatted string representation.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Take RGB values and return a CSS formatted string representation.
 function toCSS(r,g,b){
     return "rgb("+r+","+g+","+b+")";
 }
@@ -294,8 +285,7 @@ $(document).ready(function(){
     $('body').css('background-color', toCSS(r,g,b));
     transition(r,g,b);
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Not too bad huh? All you gotta to do make it work is
 add a script tag to the page you want it on, and point that at
@@ -341,7 +331,7 @@ this script.</p>
 
           
           <li>
-            <a href="https://twitter.com/that_konstantin">
+            <a href="https://twitter.com/async_def">
               <span class="icon  icon--twitter">
                 <svg viewBox="0 0 16 16">
                   <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -349,7 +339,7 @@ this script.</p>
                 </svg>
               </span>
 
-              <span class="username">that_konstantin</span>
+              <span class="username">async_def</span>
             </a>
           </li>
           

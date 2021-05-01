@@ -5,7 +5,7 @@ description: >
     Hi I'm Konstantin. Welcome to my site.
 baseurl: ""
 url: "http://konstantinfarrell.github.io"
-twitter_username: that_konstantin
+twitter_username: async_def
 github_username:  konstantinfarrell
 permalink: /:year/:month/:title
 
