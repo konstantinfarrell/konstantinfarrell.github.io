@@ -8,11 +8,11 @@ permalink: /about/
 
 ## My name is Konstantin. I make things go.
 
-I'm a Python programmer with a lot of web experience. I've done front end work in javascript and html/css
-as well as back end work using frameworks like Django, Flask and Tornado as well as good ol' php and mysql.
+I'm a cloud engineer with lots of experience in high-performance, scaleable, security-driven backend web API development.
 
-Currently I work with an amazing team at [Cylance](http://cylance.com) writing some sweet code while
-making lame jokes.
+I'm language agnostic but love working with Python, Rust, or Golang.
+
+Currently I work with an amazing team at [Cylance](http://cylance.com) giving life to our flagship product: CylancePROTECT.
 
 My hobbies include writing code, creating music or art, tinkering with electronics,
 building and inventing.
