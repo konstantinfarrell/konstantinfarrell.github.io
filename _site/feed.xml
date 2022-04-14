@@ -6,9 +6,123 @@
 </description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 01 May 2021 09:29:29 -0700</pubDate>
-    <lastBuildDate>Sat, 01 May 2021 09:29:29 -0700</lastBuildDate>
+    <pubDate>Thu, 14 Apr 2022 12:14:34 -0700</pubDate>
+    <lastBuildDate>Thu, 14 Apr 2022 12:14:34 -0700</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Lets Avoid The Blame Game</title>
+        <description>&lt;h1 id=&quot;the-problem&quot;&gt;The Problem&lt;/h1&gt;
+
+&lt;p&gt;I’ve been in a lot of meetings that follow a particular structure: A feature is requested, developers
+agree on requirements, and the meeting ends with everyone feeling pretty good about what was accomplished.&lt;/p&gt;
+
+&lt;p&gt;A few weeks later theres a follow up meeting and the developer presents a proof of concept that is wildly different than what was requested.
+On top of this, when asked why the final product is so much different than what was requested, the developer cites unclear requirements.&lt;/p&gt;
+
+&lt;p&gt;What went wrong?&lt;/p&gt;
+
+&lt;p&gt;Requirements were supposedly clarified during the first meeting so how is it that they were unclear?&lt;/p&gt;
+
+&lt;h1 id=&quot;a-story&quot;&gt;A Story&lt;/h1&gt;
+
+&lt;p&gt;When I started as an engineer and was presented with a problem to solve, I felt very good about the fact that when given the problem, my mind would immediately start cranking away at a solution; An abstract structure was created to represent how I thought the mechanism would work. More specific pieces were highlighted as areas of importance in implementing the solution.&lt;/p&gt;
+
+&lt;p&gt;Without asking any questions I had a great idea of how to solve the problem.&lt;/p&gt;
+
+&lt;p&gt;So I would get started on the implementation and very quickly hit a wall. But because we’d already gone through the planning process I would decide that this wall was something I should either already know how to get past, or an implementation detail left up to the developer.&lt;/p&gt;
+
+&lt;p&gt;I cant count the number of times this happened and resulted in meetings with exhausted project managers, furious that they had to push the deadline back yet again, because what I presented to them weeks later was not what they were asking for.&lt;/p&gt;
+
+&lt;p&gt;I’m not sure why it took me years to see the issue was with what I was doing, but eventually I saw the problem.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-thought-process&quot;&gt;The Thought Process&lt;/h1&gt;
+
+&lt;p&gt;I think two of the worst things you can do as a software engineer in the context of your team are 1) giving others the impression that you know something when you dont, and 2) not checking every one of your assumptions.&lt;/p&gt;
+
+&lt;p&gt;When you’re starting out, imposter syndrome is a hard foe to deal with. And the symptoms and side effects are very obvious to industry veterans. It’s even worse with veterans from other areas who switch over to software engineering, because they assume their prior expertise will help them. It wont. Building software is a beast unlike any other. And it leads to them feeling even more ashamed and embarassed than someone who is fresh to the industry.&lt;/p&gt;
+
+&lt;p&gt;That’s why its best for companies to pair entry level engineers with seniors who have proven they are capable of checking their assumptions, and admitting when they dont know something. They can show the new engineer the humble mindset necessary to advance and succeed.&lt;/p&gt;
+
+&lt;p&gt;For me it took burning out at a company to the point where I no longer cared what people thought before I became comfortable telling a director “I have no idea what you’re talking about or how any of that works”.
+The first time I did it was a tough hurdle to cross, but immediately improved my quality of life at that job. It was a completely acceptable answer and gave them more context as to what areas I could help out in, and what areas they needed to provide me with more resources before I could do anything.&lt;/p&gt;
+
+&lt;p&gt;After doing this a few times I came to the realization of what sort of image I was creating for myself previously.&lt;/p&gt;
+
+&lt;p&gt;This was a new director. It was early in our working relationship. I was curious as to why the director was suddenly asking me for insight when previous directors had always asked my manager or someone else on my team.&lt;/p&gt;
+
+&lt;h3 id=&quot;by-telling-the-director-i-knew-something-when-i-didnt-then-later-admitting-that-what-i-told-them-was-incorrect-i-was-sabatoging-my-own-credibility&quot;&gt;By telling the director I knew something when I didn’t, then later admitting that what I told them was incorrect, I was sabatoging my own credibility.&lt;/h3&gt;
+
+&lt;p&gt;Today if an engineer tells me they know how to work with a framework, and later on I come to find out that they were using the framework for the first time, than engineer is done. I can’t trust what they are telling me because they thought they could pull a fast one and learn the framework on the fly.&lt;/p&gt;
+
+&lt;p&gt;Don’t do this.&lt;/p&gt;
+
+&lt;p&gt;Everyone can see through this.&lt;/p&gt;
+
+&lt;p&gt;You make yourself look like a fool.&lt;/p&gt;
+
+&lt;p&gt;If that engineer had instead told me they had never worked with the framework, but were willing to spike on learning about it for an hour before coming back to me with a better answer as to how long the task might take or whether it’s even achievable, I would consider that engineer for a promotion.&lt;/p&gt;
+
+&lt;p&gt;The same is true of engineers who start blaming unclear requirements after the fact. In the end it doesn’t matter that you thought the request was for X when really it was for Y. What matters is that time has been wasted, promises for deliverables have been broken, and credibility is potentially on the line.&lt;/p&gt;
+
+&lt;p&gt;I’m not talking about a situation where you have to push back because the team realized a component needs to be refactored for this feature to scale or be more extensible in the long run.&lt;/p&gt;
+
+&lt;p&gt;I’m talking about taking a week to build out a feature without any dialogue or clarification, thinking a product is finished and ready, and then being told to essentially redo everything.&lt;/p&gt;
+
+&lt;h1 id=&quot;dont-be-a-hero&quot;&gt;Dont Be A Hero&lt;/h1&gt;
+
+&lt;p&gt;I think part of this stems from the idea that somehow if you were able to get this done right without needing to clarify, then you would be seen as a much better engineer than others.&lt;/p&gt;
+
+&lt;p&gt;Most people with experience understand that this is almost never the case. In the very best case, you frustrate people because they don’t have visibility into what you’re doing. In the worst case, you derail other individuals that have to then clean up after you.&lt;/p&gt;
+
+&lt;p&gt;I worked at a company where an engineer thought it would be cool to run a database backfill script during an all hands meeting.&lt;/p&gt;
+
+&lt;p&gt;The script had a bug that resulted in several services going down. My team was pulled away from the meeting to put out fires. The engineer never told anyone he was running the script, and never asked for permission. The end result was a massive panic to try to bring systems back up, as well as several engineers calling for this individuals termination.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what-should-you-do&quot;&gt;So What SHOULD You Do?&lt;/h1&gt;
+
+&lt;p&gt;As you experience more of the industry, the skill in development is less about your ability to write code, and more about your ability to communicate.&lt;/p&gt;
+
+&lt;p&gt;It takes years to build this experience and develop a second nature for knowing when assumptions may have been made. But there are a few rules of thumb and processes that can help.&lt;/p&gt;
+
+&lt;p&gt;System design interviews are a great resource for this. There are many youtube videos that go over how to conduct yourself during one of these. 
+One of the techniques used in almost every interview when talking about requirements is reiteration of the problem.
+No matter how well you think you understand the problem, you repeat back what your understanding of the problem is.&lt;/p&gt;
+
+&lt;p&gt;I have been asked about 20 times to build a “url shortening system” like tinyurl or bitly. This is a very well founded and well known service that many people are familiar with. Still, the first thing I always do is repeat to the interviewer what my understanding of a url shortening system is.&lt;/p&gt;
+
+&lt;p&gt;Repeating this back is a tiny but crucial step that allows you to clarify any assumptions you have, and also solidify the idea in a feynman-esque way. If you understand the problem, it shouldn’t be hard to describe. If you cant describe it easily, you don’t understand it well enough.&lt;/p&gt;
+
+&lt;p&gt;After this you should have a checklist of criteria that you think about when working on this problem:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is the scale? How many users? How many requests? Think about every aspect of scale and whether or not asking about it can clarify the request.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What about verbs? Is this system read heavy? Write heavy?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What about response time? What should the response look like?&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are just a few examples, and you can tell even in these questions that there are assumptions made about this system. Verbs imply network operations. Does this system talk to other components? Are HTTP verbs really applicable here?&lt;/p&gt;
+
+&lt;p&gt;What happens if the client or product manager asks about something you know nothing about? Well, you had better not lie.&lt;/p&gt;
+
+&lt;p&gt;Responding with statements like “Well my experience with X is fairly limited, if it’s like Y then I can speak to how it can be used, otherwise I’d like to take some time to do a little research and get back to you.” can help you gain more insight without losing the confidence of the client.&lt;/p&gt;
+
+&lt;p&gt;If you feel a little crazy at this point I think that’s pretty normal. Questioning every thought you have is a hard and annoying habit to form. But I believe that by doing this you can avoid a lot of growing pains.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 Apr 2022 00:00:00 -0700</pubDate>
+        <link>http://0.0.0.0:4000/2022/04/things-to-remember</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2022/04/things-to-remember</guid>
+        
+        
+        <category>Opinion</category>
+        
+      </item>
     
       <item>
         <title>It's Been A While</title>
