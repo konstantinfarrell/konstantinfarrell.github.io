@@ -5,7 +5,7 @@ category: Opinion
 exerpt: Here's a few tips I've discovered over the years that I haven't heard anyone teach in schools. 
 author: Konstantin Farrell
 edited: 2022-04-14
-published: true
+published: false
 image:
 image-alt:
 ---
